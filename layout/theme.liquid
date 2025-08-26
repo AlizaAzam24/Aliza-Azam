@@ -6,6 +6,8 @@
   <head>
     {%- render 'stylesheets' -%}
 
+    {{ 'gift-guide.css' | asset_url | stylesheet_tag }}
+
     {%- if settings.favicon != blank -%}
       <link
         rel="icon"
@@ -21,7 +23,7 @@
       blocking="render"
       id="view-transition-render-blocker"
     >
-
+    
     {%- render 'meta-tags' -%}
     {%- render 'fonts' -%}
     {%- render 'scripts' -%}
@@ -66,5 +68,8 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
+    
+    {{ 'gift-guide.js' | asset_url | script_tag }}
   </body>
 </html>
+
