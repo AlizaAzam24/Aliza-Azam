@@ -1,0 +1,19 @@
+<section class="gift-guide-navbar">
+  <span class="gift-guide-navbar__logo">{{ section.settings.logo }}</span>
+  <span class="gift-guide-navbar__promo">{{ section.settings.promo }}</span>
+  <a href="{{ section.settings.cta_link }}" class="gift-guide-navbar__cta">
+    {{ section.settings.cta_text }}<span class="arrow">→</span>
+  </a>
+</section>
+{% schema %}
+{
+  "name": "Gift Guide Navbar",
+  "settings": [
+    { "type": "text", "id": "logo", "label": "Logo/Brand", "default": "TISSO VISON" },
+    { "type": "text", "id": "promo", "label": "Promo message", "default": "Find the ideal gift for your loved ones." },
+    { "type": "text", "id": "cta_text", "label": "CTA Button Text", "default": "CHOOSE GIFT" },
+    { "type": "url", "id": "cta_link", "label": "CTA Button Link" }
+  ],
+  "presets": [ { "name": "Gift Guide Navbar" } ]
+}
+{% endschema %}

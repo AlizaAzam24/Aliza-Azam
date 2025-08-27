@@ -1,39 +1,33 @@
-{%- comment -%}
-  Custom product grid for the Gift Guide.
-  Displays 6 selected products as blocks.
-  Popup is handled via JS and is included in this section.
-{%- endcomment -%}
 <section class="gift-guide-grid">
   <h2 class="gift-guide-grid__title">{{ section.settings.grid_title }}</h2>
   <div class="gift-guide-grid__wrapper">
     {% for block in section.blocks %}
       {% assign product = all_products[block.settings.product] %}
       {% if product %}
-        <div class="gift-guide-grid__item"
-          tabindex="0"
-          role="button"
-          aria-label="View details for {{ product.title }}"
-          data-handle="{{ product.handle }}"
-        >
-        
-        <img alt="Sample product" src="image 822.svg" width="100px" height="100px" 
-          class="gift-guide-grid__img"/>  
-        <span class="gift-guide-grid__plus">+</span>
+        <div class="gift-guide-grid__item" tabindex="0" role="button" aria-label="View details for {{ product.title }}" data-handle="{{ product.handle }}">
+          {% if product.featured_image %}
+            <img
+              src="{{ product.featured_image.src | img_url: '433x444' }}"
+              alt="{{ product.title }}"
+              width="433"
+              height="444"
+              class="gift-guide-grid__img"
+            />
+          {% else %}
+            <img
+              src="https://via.placeholder.com/433x444?text=No+Image"
+              alt="No image available"
+              width="433"
+              height="444"
+              class="gift-guide-grid__img"
+            />
+          {% endif %}
+          <span class="gift-guide-grid__plus">+</span>
         </div>
       {% endif %}
     {% endfor %}
   </div>
-
-  <!-- Popup, hidden by default; content is injected by JS -->
-  <div id="gift-guide-popup" class="gift-guide-popup" style="display:none;">
-    <div class="gift-guide-popup__overlay"></div>
-    <div class="gift-guide-popup__content" role="dialog" aria-modal="true">
-      <button class="gift-guide-popup__close" aria-label="Close popup">×</button>
-      <div id="gift-guide-popup-dynamic"></div>
-    </div>
-  </div>
 </section>
-
 {% schema %}
 {
   "name": "Gift Guide Product Grid",
