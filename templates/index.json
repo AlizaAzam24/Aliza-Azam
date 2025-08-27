@@ -13,10 +13,12 @@
       "type": "gift-guide-banner",
       "name": "Gift Guide Banner",
       "settings": {
+        "hero_image": "shopify://shop_images/Frame_1.png",
         "heading": "The Gift Guide",
         "desc": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.",
         "main_btn_text": "SHOP NOW",
         "main_btn_link": "",
+        "right_image": "shopify://shop_images/Frame.png",
         "strip_text": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
       }
     },
@@ -26,19 +28,19 @@
         "product_7gbYji": {
           "type": "product",
           "settings": {
-            "product": ""
+            "product": "black-leather-bag"
           }
         },
         "product_jUmc6y": {
           "type": "product",
           "settings": {
-            "product": ""
+            "product": "blue-silk-tuxedo"
           }
         },
         "product_RApWcy": {
           "type": "product",
           "settings": {
-            "product": ""
+            "product": "chequered-red-shirt"
           }
         },
         "product_RVRfqg": {
