@@ -1,44 +1,40 @@
-{%- comment -%}
-  Custom banner section for the Gift Guide.
-  All text, buttons, and main image are editable via Shopify customizer.
-  Animations for buttons are handled via CSS transitions.
-{%- endcomment -%}
 <section class="gift-guide-banner">
-  <div class="gift-guide-banner__topbar">
-    <span class="gift-guide-banner__logo">{{ section.settings.logo }}</span>
-    <span class="gift-guide-banner__promo">{{ section.settings.promo }}</span>
-    <a href="{{ section.settings.top_button_link }}" class="gift-guide-banner__top-btn">
-      {{ section.settings.top_button_text }}
-      <span class="arrow">→</span>
-    </a>
-  </div>
-  <div class="gift-guide-banner__main" style="background-image:url({{ section.settings.bg | img_url: 'master' }});">
-    <div class="gift-guide-banner__main-content">
-      <h1 class="gift-guide-banner__title">{{ section.settings.heading }}</h1>
-      <p class="gift-guide-banner__desc">{{ section.settings.subheading }}</p>
-      <a href="{{ section.settings.main_button_link }}" class="gift-guide-banner__main-btn">
-        {{ section.settings.main_button_text }}
-        <span class="arrow">→</span>
+  <!-- Hero top image -->
+  {% if section.settings.hero_image %}
+    <img src="{{ section.settings.hero_image | img_url: '1440x390' }}" alt="Banner Hero" 
+      class="gift-guide-banner__hero-img" width="1440"height="390"/>
+  {% endif %}
+  <!-- Split layout below the hero image -->
+  <div class="gift-guide-banner__split">
+    <div class="gift-guide-banner__text-side">
+      <h1 class="gift-guide-banner__heading">{{ section.settings.heading }}</h1>
+      <p class="gift-guide-banner__desc">{{ section.settings.desc }}</p>
+      <a href="{{ section.settings.main_btn_link }}" class="gift-guide-banner__main-btn">
+        {{ section.settings.main_btn_text }} <span class="arrow">→</span>
       </a>
     </div>
+    <div class="gift-guide-banner__img-side">
+      {% if section.settings.right_image %}
+        <img src="{{ section.settings.hero_image2 | img_url: '890x404' }}" alt="Banner Side" 
+          class="gift-guide-banner__img" width="890"height="404"/>
+      {% endif %}
+    </div>
   </div>
-  <div class="gift-guide-banner__bottombar">{{ section.settings.bottom_text }}</div>
+  <div class="gift-guide-banner__strip">
+    {{ section.settings.strip_text }}
+  </div>
 </section>
-
 {% schema %}
 {
   "name": "Gift Guide Banner",
   "settings": [
-    { "type": "text", "id": "logo", "label": "Logo/Brand (top left)", "default": "TISSO VISON" },
-    { "type": "text", "id": "promo", "label": "Promo message (top center)", "default": "Find the ideal gift for your loved ones." },
-    { "type": "text", "id": "top_button_text", "label": "Top right button text", "default": "CHOOSE GIFT" },
-    { "type": "url", "id": "top_button_link", "label": "Top right button link" },
-    { "type": "image_picker", "id": "bg", "label": "Main illustration (background image)" },
-    { "type": "text", "id": "heading", "label": "Main heading", "default": "The Gift Guide" },
-    { "type": "textarea", "id": "subheading", "label": "Subheading/description", "default": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season." },
-    { "type": "text", "id": "main_button_text", "label": "Main button text", "default": "SHOP NOW" },
-    { "type": "url", "id": "main_button_link", "label": "Main button link" },
-    { "type": "text", "id": "bottom_text", "label": "Bottom bar text", "default": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL" }
+    { "type": "image_picker", "id": "hero_image", "label": "Top Banner Image (1440x390)" },
+    { "type": "text", "id": "heading", "label": "Banner Heading", "default": "The Gift Guide" },
+    { "type": "textarea", "id": "desc", "label": "Banner Description", "default": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season." },
+    { "type": "text", "id": "main_btn_text", "label": "Main Button Text", "default": "SHOP NOW" },
+    { "type": "url", "id": "main_btn_link", "label": "Main Button Link" },
+    { "type": "image_picker", "id": "right_image", "label": "Right Side Banner Image (890x404)" },
+    { "type": "text", "id": "strip_text", "label": "Strip Text", "default": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL" }
   ],
   "presets": [ { "name": "Gift Guide Banner" } ]
 }
