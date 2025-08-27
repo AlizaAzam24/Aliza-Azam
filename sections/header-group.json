@@ -117,10 +117,21 @@
         "enable_transparent_header_collection": false,
         "collection_color_scheme": "default"
       }
+    },
+    "gift_guide_navbar_8CzGgA": {
+      "type": "gift-guide-navbar",
+      "name": "Gift Guide Navbar",
+      "settings": {
+        "logo": "TISSO VISON",
+        "promo": "Find the ideal gift for your loved ones.",
+        "cta_text": "CHOOSE GIFT",
+        "cta_link": ""
+      }
     }
   },
   "order": [
     "header_announcements_9jGBFp",
-    "header_section"
+    "header_section",
+    "gift_guide_navbar_8CzGgA"
   ]
 }
