@@ -6,10 +6,10 @@
       {% if product %}
         <div class="gift-guide-grid__item" data-product-index="{{ forloop.index0 }}">
           <img
-            src="{{ product.featured_image.src | img_url: '433x444' }}"
+            src="{{ product.featured_image.svg | img_url: 1440 , 390 | stylesheet_tag}}"
             alt="{{ product.title }}"
-            width="433"
-            height="444"
+            width="390px"
+            height="340px"
             class="gift-guide-grid__img"
           />
           <span class="gift-guide-grid__plus" data-product-index="{{ forloop.index0 }}">+</span>
@@ -21,10 +21,10 @@
   <div id="gift-guide-popup" class="gift-guide-popup" style="display:none;">
     <div class="gift-guide-popup__content">
       <button class="gift-guide-popup__close" aria-label="Close popup">&times;</button>
-      <img class="gift-guide-popup__img" id="popup-product-img" src="product_1" alt="White Shirt" width="120px" height="140px" />
-      <div class="gift-guide-popup__product-title" id="popup-product-title" aria-label="Orange Wide Leg"></div>
-      <div class="gift-guide-popup__product-price" id="popup-product-price" aria-label="980,00€"></div>
-      <div class="gift-guide-popup__product-desc" id="popup-product-desc" aria-label="This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief."></div>
+      <img class="gift-guide-popup__img" id="popup-product-img" src="Product_1" alt="White Shirt" width="120px" height="140px" />
+      <div class="gift-guide-popup__product-title" id="popup-product-title"></div>
+      <div class="gift-guide-popup__product-price" id="popup-product-price"></div>
+      <div class="gift-guide-popup__product-desc" id="popup-product-desc"></div>
       <div class="gift-guide-popup__variant-label">Color</div>
       <div class="gift-guide-popup__colors" id="popup-product-colors">
         <button class="gift-guide-popup__color-btn">White</button>
