@@ -6,7 +6,7 @@
       {% if product %}
         <div class="gift-guide-grid__item" data-product-index="{{ forloop.index0 }}">
           <img src="{{ product.featured_image | img_url: '444x433' }}"
-            alt="{{ product.title }}" class="gift-guide-grid__img"/>
+            alt="{{ product.title }}" class="gift-guide-grid__img" width="444" height="433">
           <span class="gift-guide-grid__plus" data-product-index="{{ forloop.index0 }}">+</span>
         </div>
       {% endif %}
