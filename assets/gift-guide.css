@@ -80,7 +80,7 @@
   gap: 8px;
   cursor: pointer;
   overflow: hidden;
-  transition: transform 0.18s, box-shadow 0.18s;
+  transition: transform 0.18s, box-shadow 0.18s , color 0.4s;
 }
 
 /* Background swipe */
@@ -97,7 +97,7 @@
 }
 
 /* Text */
-.gift-guide-banner__main-btn .span {
+.gift-guide-banner__main-btn span {
   position: relative;
   z-index: 1;
   transition: color 0.4s ease;
@@ -115,7 +115,7 @@
   left: 0;
 }
 
-.gift-guide-banner__main-btn:hover .span {
+.gift-guide-banner__main-btn:hover span {
   color: #111; /* text turns black */
 }
 
