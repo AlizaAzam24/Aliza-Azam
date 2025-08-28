@@ -79,7 +79,7 @@
   gap: 8px;
   cursor: pointer;
   transition: backgroundcolor 0.25s, transform 0.18s, box-shadow 0.18s;
-  padding: 16px 40px;
+  padding: 24px 40px;
 }
 .gift-guide-banner__main-btn:hover,
 .gift-guide-banner__main-btn:focus {
@@ -104,7 +104,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding-right: 24px;
+  /* padding-right: 24px; */
 }
 .gift-guide-banner__img {
   width: 863px;
