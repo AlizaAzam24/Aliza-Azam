@@ -116,7 +116,7 @@
 }
 
 .gift-guide-banner__main-btn:hover span {
-  color: #111; text turns black
+  color: #111; /* text turns black */
   transform: translateX(6px);
 }
 
