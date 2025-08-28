@@ -66,20 +66,21 @@
 
 .gift-guide-banner__main-btn {
   position: relative;
-  width: 220px;
-  height: 45px;
-  background: #111;
-  color: #fff;
-  border: none;
-  border-radius: 2px;
-  font-size: 16px;
-  font-weight: 500;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  cursor: pointer;
+  width: 220px;
+  height: 45px;
+  background: #111;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff; /* initial text color */
+  text-decoration: none;
   overflow: hidden;
+  cursor: pointer;
+  padding: 0 20px;
   transition: transform 0.18s, box-shadow 0.18s;
 }
 
@@ -93,35 +94,40 @@
   height: 100%;
   background: #ffe940;
   transition: left 0.4s ease;
-  z-index: 0; /* Behind text */
+  z-index: 0; /* behind text */
 }
 
-/* Text and arrow above the background */
-.gift-guide-banner__main-btn span {
-  position: relative;
-  z-index: 1; /* Above ::before */
-  transition: transform 0.4s ease; /* Color change transition */
-}
-
+/* Text and arrow above background */
+.gift-guide-banner__main-btn span,
 .gift-guide-banner__main-btn .arrow {
   position: relative;
   z-index: 1;
+  transition: color 0.4s ease;
+  color: inherit; /* inherit color from parent */
+}
+
+/* Arrow animation */
+.gift-guide-banner__main-btn .arrow {
   font-size: 1.3em;
   transition: transform 0.3s ease;
 }
 
-/* Hover/focus state */
+/* Hover/focus effect */
 .gift-guide-banner__main-btn:hover::before {
-  left: 0; /* Swipe background from left */
+  left: 0; /* slide background in */
 }
 
 .gift-guide-banner__main-btn:hover span {
-  color: #111; /* Text color changes to black */
-  transform: color;
+  color: #111; /* text color changes */
 }
 
 .gift-guide-banner__main-btn:hover .arrow {
-  transform: translateX(6px); /* Optional arrow movement */
+  transform: translateX(6px);
+}
+
+.gift-guide-banner__main-btn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.13);
 }
 
 /* .gift-guide-banner__main-btn:hover {
