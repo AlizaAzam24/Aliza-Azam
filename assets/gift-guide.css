@@ -99,7 +99,7 @@
 
 /* Banner right: image */
 .gift-guide-banner__img-side {
-  flex: 0 0 800px;
+  flex: 0 0 890px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,7 +107,7 @@
   padding-right: 24px;
 }
 .gift-guide-banner__img {
-  width: 800px;
+  width: 863px;
   height: 390px;
   object-fit: cover;
   display: block;
