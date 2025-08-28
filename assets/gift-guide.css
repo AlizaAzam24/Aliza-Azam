@@ -83,7 +83,7 @@
 }
 .gift-guide-banner__main-btn:hover,
 .gift-guide-banner__main-btn:focus {
-  background: #222;
+  background: #111;
   color: #ffe940;
   transform: scale(1.04);
   box-shadow: 0 6px 16px rgba(0,0,0,0.13);
