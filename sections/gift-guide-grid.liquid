@@ -5,7 +5,7 @@
       {% assign product = all_products[block.settings.product] %}
       {% if product %}
         <div class="gift-guide-grid__item" data-product-index="{{ forloop.index0 }}">
-          <img src="{{ product.featured_image | img_url: width: 1440 , height: 390 }}"
+          <img src="{{ product.featured_image | img_url: '444x433' }}"
             alt="{{ product.title }}" class="gift-guide-grid__img"/>
           <span class="gift-guide-grid__plus" data-product-index="{{ forloop.index0 }}">+</span>
         </div>
@@ -16,7 +16,7 @@
   <div id="gift-guide-popup" class="gift-guide-popup" style="display:none;">
     <div class="gift-guide-popup__content">
       <button class="gift-guide-popup__close" aria-label="Close popup">&times;</button>
-      <img class="gift-guide-popup__img" id="popup-product-img" src="Product_1" alt="White Shirt" width="120px" height="140px" />
+      <img class="gift-guide-popup__img" id="popup-product-img" src="" alt="" width="" height="" />
       <div class="gift-guide-popup__product-title" id="popup-product-title"></div>
       <div class="gift-guide-popup__product-price" id="popup-product-price"></div>
       <div class="gift-guide-popup__product-desc" id="popup-product-desc"></div>
