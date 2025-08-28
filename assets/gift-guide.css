@@ -38,11 +38,11 @@
 /* Banner left: text */
 .gift-guide-banner__text-side {
   flex: 1 1 0;
-  padding-left: 62px;
+  padding-left: 55px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 577px;
+  width: 575px;
 }
 
 .gift-guide-banner__heading,
