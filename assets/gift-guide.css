@@ -111,14 +111,14 @@
   height: 390px;
   object-fit: cover;
   display: block;
-  border-radius: 16px;
+  border-radius: 0;
   box-shadow: 0 6px 32px rgba(0,0,0,0.08);
 }
 
 /* Banner strip */
 .gift-guide-banner__strip {
   width: var(--banner-width);
-  height: 34px;
+  height: 36px;
   background: #f7f7f7;
   color: #181818;
   font-size: 1rem;
