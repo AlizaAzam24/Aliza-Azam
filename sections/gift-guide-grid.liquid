@@ -1,52 +1,21 @@
-<section class="gift-guide-grid">
-  <h2 class="gift-guide-grid__title">Tisso vison in the wild</h2>
-  <div class="gift-guide-grid__wrapper">
-    {% for block in section.blocks %}
-      {% assign product = all_products[block.settings.product] %}
-      {% if product %}
-        <div class="gift-guide-grid__item" data-product-index="{{ forloop.index0 }}">
-          <img
-            src="{{ product.featured_image.svg | img_url: 1440 , 390 | stylesheet_tag}}"
-            alt="{{ product.title }}"
-            width="390px"
-            height="340px"
-            class="gift-guide-grid__img"
-          />
-          <span class="gift-guide-grid__plus" data-product-index="{{ forloop.index0 }}">+</span>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-  <!-- Popup -->
-  <div id="gift-guide-popup" class="gift-guide-popup" style="display:none;">
-    <div class="gift-guide-popup__content">
-      <button class="gift-guide-popup__close" aria-label="Close popup">&times;</button>
-      <img class="gift-guide-popup__img" id="popup-product-img" src="Product_1" alt="White Shirt" width="120px" height="140px" />
-      <div class="gift-guide-popup__product-title" id="popup-product-title"></div>
-      <div class="gift-guide-popup__product-price" id="popup-product-price"></div>
-      <div class="gift-guide-popup__product-desc" id="popup-product-desc"></div>
-      <div class="gift-guide-popup__variant-label">Color</div>
-      <div class="gift-guide-popup__colors" id="popup-product-colors">
-        <button class="gift-guide-popup__color-btn">White</button>
-        <button class="gift-guide-popup__color-btn">Black</button>
-      </div>
-      <div class="gift-guide-popup__variant-label">Size</div>
-      <div class="gift-guide-popup__sizes">
-        <select class="gift-guide-popup__size-select" id="popup-product-size">
-          <option>Choose your size</option>
-          <option>XS</option>
-          <option>S</option>
-          <option>M</option>
-          <option>L</option>
-          <option>XL</option>
-        </select>
-      </div>
-      <button class="gift-guide-popup__atc-btn">
-        ADD TO CART <span class="gift-guide-popup__atc-arrow">&rarr;</span>
-      </button>
+<!-- Gift Guide Grid -->
+<div class="gift-guide-grid">
+  {% for product in collections['your-collection-handle'].products %}
+    <div class="gift-guide-grid__item" data-handle="{{ product.handle }}">
+      <img src="{{ product.featured_image | img_url: '433x444' }}" alt="{{ product.title }}">
+      <h3>{{ product.title }}</h3>
+      <p>{{ product.price | money }}</p>
     </div>
+  {% endfor %}
+</div>
+
+<!-- Gift Guide Popup -->
+<div id="gift-guide-popup" class="gift-guide-popup" style="display:none;">
+  <div class="gift-guide-popup__content">
+    <button class="gift-guide-popup__close" aria-label="Close popup">&times;</button>
+    <div id="gift-guide-popup-dynamic"></div> <!-- Product details go here -->
   </div>
-</section>
+</div>
 
 {% schema %}
 {
