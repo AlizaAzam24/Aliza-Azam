@@ -38,7 +38,7 @@
 /* Banner left: text */
 .gift-guide-banner__text-side {
   flex: 1 1 0;
-  padding-left: 55px;
+  padding-left: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,7 +47,7 @@
 
 .gift-guide-banner__heading,
 .gift-guide-banner__title {
-  font-family: 'Jost', 'Inter', Arial, sans-serif;
+  font-family: 'Jost';
   font-weight: 500;
   font-size: 50px;
   margin-bottom: 26px;
