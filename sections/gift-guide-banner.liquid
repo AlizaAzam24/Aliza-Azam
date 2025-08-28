@@ -9,9 +9,14 @@
     <div class="gift-guide-banner__text-side">
       <h1 class="gift-guide-banner__heading">{{ section.settings.heading }}</h1>
       <p class="gift-guide-banner__desc">{{ section.settings.desc }}</p>
-      <a href="{{ section.settings.main_btn_link }}" class="gift-guide-banner__main-btn">
+      {% comment %} <a href="{{ section.settings.main_btn_link }}" class="gift-guide-banner__main-btn">
         {{ section.settings.main_btn_text }} <span class="arrow">→</span>
+      </a> {% endcomment %}
+      <a href="{{ section.settings.main_btn_link }}" class="gift-guide-banner__main-btn">
+        <span class="btn-text">{{ section.settings.main_btn_text }}</span>
+        <span class="arrow">→</span>
       </a>
+
     </div>
     <div class="gift-guide-banner__img-side">
       {% if section.settings.right_image %}
