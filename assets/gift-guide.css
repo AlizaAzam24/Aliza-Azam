@@ -107,8 +107,8 @@
   padding-right: 24px;
 }
 .gift-guide-banner__img {
-  width: 863px;
-  height: 390px;
+  width: 890px;
+  height: 404px;
   object-fit: cover;
   display: block;
   border-radius: 16px;
@@ -285,8 +285,8 @@
   transform: translateY(-5px) scale(1.015);
 }
 .gift-guide-grid__img {
-  width: 390px;
-  height: 400px;
+  width: 444px;
+  height: 433px;
   object-fit: cover;
   display: block;
 }
