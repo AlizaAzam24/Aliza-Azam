@@ -104,12 +104,13 @@
 .gift-guide-banner__main-btn span {
   position: relative;
   z-index: 1;
-  transition: transform 0.2s;
+  transition: transform 0.25s;
 }
 
 .gift-guide-banner__main-btn:hover span,
 .gift-guide-banner__main-btn:focus span {
   color: #111;
+  transform: translateX(6px);
 }
 
 .gift-guide-banner__main-btn .arrow {
