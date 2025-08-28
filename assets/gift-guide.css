@@ -65,6 +65,7 @@
 }
 
 .gift-guide-banner__main-btn {
+  position: relative;
   width: 220px;
   height: 45px;
   background: #111;
@@ -78,12 +79,12 @@
   justify-content: center;
   gap: 8px;
   cursor: pointer;
-  position: relative;
   overflow: hidden;
   padding: 0;
-  transition: transform 0.18s, box-shadow 0.18s;
+  transition: color 0.3s ease, transform 0.18s ease, box-shadow 0.18s ease;
 }
 
+/* sliding background */
 .gift-guide-banner__main-btn::before {
   content: "";
   position: absolute;
@@ -92,30 +93,27 @@
   width: 100%;
   height: 100%;
   background: #ffe940;
-  transition: left 0.25s ease-in-out;
+  transition: left 0.3s ease;
   z-index: 0;
+}
+
+.gift-guide-banner__main-btn span,
+.gift-guide-banner__main-btn .arrow {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.gift-guide-banner__main-btn:hover,
+.gift-guide-banner__main-btn:focus {
+  color: #111; /* text color changes */
+  transform: scale(1.04);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.13);
 }
 
 .gift-guide-banner__main-btn:hover::before,
 .gift-guide-banner__main-btn:focus::before {
-  left: 0;
-}
-
-.gift-guide-banner__main-btn span {
-  position: relative;
-  z-index: 1;
-  transition: transform 0.25s;
-}
-
-.gift-guide-banner__main-btn:hover span,
-.gift-guide-banner__main-btn:focus span {
-  /* color: #111; */
-  transform: translateX(6px);
-}
-
-.gift-guide-banner__main-btn .arrow {
-  font-size: 1.3em;
-  transition: transform 0.2s;
+  left: 0; /* swipe in */
 }
 
 .gift-guide-banner__main-btn:hover .arrow,
