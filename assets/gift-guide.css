@@ -76,50 +76,20 @@
   border-radius: 2px;
   font-size: 16px;
   font-weight: 500;
-  color: #fff;
+  color: #fff; /* initial text color */
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
   padding: 0 20px;
-  transform: scale(1);
   transition: transform 0.18s, box-shadow 0.18s;
 }
 
-/* Background swipe */
-.gift-guide-banner__main-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: #ffe940;
-  transition: left 0.5s ease;
-  z-index: 0;
-}
-
-/* Text container for masking */
-.gift-guide-banner__main-btn span {
+/* Nested span for text */
+.gift-guide-banner__main-btn .btn-text {
   position: relative;
   z-index: 1;
-  display: inline-block;
-  color: #fff;
-  transition: color 0.5s ease;
-  overflow: hidden;
-}
-
-/* Mask effect: hidden part of text initially */
-.gift-guide-banner__main-btn span::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0;
-  height: 100%;
-  color: #111;
-  overflow: hidden;
-  white-space: nowrap;
-  transition: width 0.5s ease;
+  transition: color 0.3s ease; /* text color transition */
+  color: inherit; /* inherit white initially */
 }
 
 /* Arrow */
@@ -131,22 +101,38 @@
 }
 
 /* Hover/focus effect */
-.gift-guide-banner__main-btn:hover::before {
-  left: 0; /* background slides in */
-}
-
-.gift-guide-banner__main-btn:hover span::after {
-  width: 100%; /* reveal the black text */
-}
-
-.gift-guide-banner__main-btn:hover .arrow {
-  transform: translateX(6px);
-}
-
 .gift-guide-banner__main-btn:hover {
   transform: scale(1.04);
   box-shadow: 0 6px 16px rgba(0,0,0,0.13);
 }
+
+/* Text color changes to #111 */
+.gift-guide-banner__main-btn:hover .btn-text {
+  color: #111;
+}
+
+/* Arrow slides on hover */
+.gift-guide-banner__main-btn:hover .arrow {
+  transform: translateX(6px);
+}
+
+/* Optional: left-to-right background swipe */
+.gift-guide-banner__main-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #ffe940;
+  z-index: 0;
+  transition: left 0.4s ease;
+}
+
+.gift-guide-banner__main-btn:hover::before {
+  left: 0;
+}
+
 
 /* .gift-guide-banner__main-btn:hover {
   transition: color 0.4s ease;
