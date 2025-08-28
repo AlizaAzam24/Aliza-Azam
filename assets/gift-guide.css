@@ -123,11 +123,11 @@
   transform: translateX(6px); /* Optional arrow movement */
 }
 
-.gift-guide-banner__main-btn:hover {
+/* .gift-guide-banner__main-btn:hover {
   transition: color 0.4s ease;
   /* transform: scale(1.04);
   box-shadow: 0 6px 16px rgba(0,0,0,0.13); */
-}
+} */
 
 /* .gift-guide-banner__main-btn { 
   width: 220px;
