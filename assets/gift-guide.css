@@ -97,10 +97,10 @@
 }
 
 /* Text */
-.gift-guide-banner__main-btn span {
+.gift-guide-banner__main-btn .span {
   position: relative;
   z-index: 1;
-  transition: transform 0.3s ease , color 0.4 ease;
+  transition: color 0.4s ease;
 }
 
 .gift-guide-banner__main-btn .arrow {
@@ -115,9 +115,8 @@
   left: 0;
 }
 
-.gift-guide-banner__main-btn:hover span {
+.gift-guide-banner__main-btn:hover .span {
   color: #111; /* text turns black */
-  transform: translateX(6px);
 }
 
 .gift-guide-banner__main-btn:hover .arrow {
