@@ -79,7 +79,7 @@
   gap: 8px;
   cursor: pointer;
   transition: backgroundcolor 0.25s, transform 0.18s, box-shadow 0.18s;
-  padding: 40px 40px;
+  padding: 16px 40px;
 }
 .gift-guide-banner__main-btn:hover,
 .gift-guide-banner__main-btn:focus {
