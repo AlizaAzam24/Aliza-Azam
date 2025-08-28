@@ -262,8 +262,8 @@
 }
 
 /* Nested span for text color animation */
-.gift-guide-navbar__cta .btn-text,
-.gift-guide-banner__top-btn .btn-text {
+.gift-guide-navbar__cta .cta-text,
+.gift-guide-banner__top-btn .cta-text {
   position: relative;
   z-index: 1;
   transition: color 0.3s ease; /* text color transition */
@@ -289,10 +289,10 @@
 } */
 
 /* Text color change */
-.gift-guide-navbar__cta:hover .btn-text,
-.gift-guide-navbar__cta:focus .btn-text,
-.gift-guide-banner__top-btn:hover .btn-text,
-.gift-guide-banner__top-btn:focus .btn-text {
+.gift-guide-navbar__cta:hover .cta-text,
+.gift-guide-navbar__cta:focus .cta-text,
+.gift-guide-banner__top-btn:hover .cta-text,
+.gift-guide-banner__top-btn:focus .cta-text {
   color: #fff;
 }
 
