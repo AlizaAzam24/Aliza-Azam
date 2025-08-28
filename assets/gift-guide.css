@@ -335,7 +335,7 @@
   font-size: 1.1rem;
   font-weight: 500;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.07); */
   cursor: pointer;
   overflow: hidden;
   padding: 12px 26px;
@@ -365,17 +365,17 @@
 .gift-guide-navbar__cta:hover,
 .gift-guide-navbar__cta:focus,
 .gift-guide-banner__top-btn:hover,
-.gift-guide-banner__top-btn:focus {
+/* .gift-guide-banner__top-btn:focus {
   transform: translateY(-2px) scale(1.04);
   box-shadow: 0 6px 16px rgba(0,0,0,0.13);
-}
+} */
 
 /* Text color change */
 .gift-guide-navbar__cta:hover .btn-text,
 .gift-guide-navbar__cta:focus .btn-text,
 .gift-guide-banner__top-btn:hover .btn-text,
 .gift-guide-banner__top-btn:focus .btn-text {
-  color: #000;
+  color: #fff;
 }
 
 /* Arrow slides on hover */
@@ -395,7 +395,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: #ffd700;
+  background: #111;
   z-index: 0;
   transition: left 0.4s ease;
 }
