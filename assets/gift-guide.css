@@ -65,7 +65,7 @@
 }
 
 .gift-guide-banner__main-btn {
-  width: 210px;
+  width: 200px;
   height: 45px;
   background: #111;
   color: #fff;
@@ -79,7 +79,7 @@
   gap: 8px;
   cursor: pointer;
   transition: backgroundcolor 0.25s, transform 0.18s, box-shadow 0.18s;
-  padding: 30px 40px;
+  padding: 40px 40px;
 }
 .gift-guide-banner__main-btn:hover,
 .gift-guide-banner__main-btn:focus {
