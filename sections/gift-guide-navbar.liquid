@@ -1,8 +1,9 @@
 <section class="gift-guide-navbar">
   <span class="gift-guide-navbar__logo">{{ section.settings.logo }}</span>
   <span class="gift-guide-navbar__promo">{{ section.settings.promo }}</span>
-  <a href="{{ section.settings.cta_link }}" class="gift-guide-navbar__cta">
-    {{ section.settings.cta_text }}<span class="arrow">→</span>
+  <a href="{{ section.settings.main_btn_link }}" class="gift-guide-navbar__cta">
+    <span class="btn-text">{{ section.settings.main_btn_text }}</span>
+    <span class="arrow">→</span>
   </a>
 </section>
 {% schema %}
