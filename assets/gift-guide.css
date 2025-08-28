@@ -93,7 +93,7 @@
 .gift-guide-banner__main-btn:focus {
   background: #ffe940;
   color: #111;
-  /* transform: scale(1.04); */
+  transform: scale(1.04);
   box-shadow: 0 6px 16px rgba(0,0,0,0.13);
 }
 
@@ -104,7 +104,7 @@
 
 .gift-guide-banner__main-btn:hover .arrow,
 .gift-guide-banner__main-btn:focus .arrow {
-  transform: translateX(2px);
+  transform: translateX(6px);
 }
 
 /* .gift-guide-banner__main-btn {
