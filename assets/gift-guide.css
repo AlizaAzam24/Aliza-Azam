@@ -100,7 +100,7 @@
 .gift-guide-banner__main-btn span {
   position: relative;
   z-index: 1; /* Above ::before */
-  transition: color 0.4s ease; /* Color change transition */
+  transition: transform 0.4s ease; /* Color change transition */
 }
 
 .gift-guide-banner__main-btn .arrow {
@@ -117,7 +117,7 @@
 
 .gift-guide-banner__main-btn:hover span {
   color: #111; /* Text color changes to black */
-  transform: color 0.4 ease;
+  transform: color;
 }
 
 .gift-guide-banner__main-btn:hover .arrow {
