@@ -100,11 +100,11 @@
   transition: transform 0.3s ease , color 0.4s ease;
 }
 
-/* Hover/focus effect */
+/* Hover/focus effect
 .gift-guide-banner__main-btn:hover {
   transform: scale(1.04);
   box-shadow: 0 6px 16px rgba(0,0,0,0.13);
-}
+} */
 
 /* Text color changes to #111 */
 .gift-guide-banner__main-btn:hover .btn-text {
@@ -113,7 +113,7 @@
 
 /* Arrow slides on hover */
 .gift-guide-banner__main-btn:hover .arrow {
-  transform: translateX(6px);
+  /* transform: translateX(6px); */
   color: #111;
 }
 
