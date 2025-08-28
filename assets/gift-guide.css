@@ -78,7 +78,7 @@
   justify-content: center;
   gap: 8px;
   cursor: pointer;
-  transition: color 0.25s, transform 0.18s, box-shadow 0.18s;
+  transition: backgroundcolor 0.25s, transform 0.18s, box-shadow 0.18s;
   padding: 30px 40px;
 }
 .gift-guide-banner__main-btn:hover,
