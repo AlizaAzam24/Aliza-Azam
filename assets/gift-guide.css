@@ -109,7 +109,7 @@
 
 .gift-guide-banner__main-btn:hover span,
 .gift-guide-banner__main-btn:focus span {
-  color: #111;
+  /* color: #111; */
   transform: translateX(6px);
 }
 
