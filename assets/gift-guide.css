@@ -117,6 +117,7 @@
 
 .gift-guide-banner__main-btn:hover span {
   color: #111; /* Text color changes to black */
+  transform: color;
 }
 
 .gift-guide-banner__main-btn:hover .arrow {
