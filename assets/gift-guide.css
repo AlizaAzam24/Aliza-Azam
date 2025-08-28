@@ -97,7 +97,7 @@
   position: relative;
   z-index: 1;
   font-size: 1.3em;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease , color 0.4s ease;
 }
 
 /* Hover/focus effect */
@@ -114,6 +114,7 @@
 /* Arrow slides on hover */
 .gift-guide-banner__main-btn:hover .arrow {
   transform: translateX(6px);
+  color: #111;
 }
 
 /* Optional: left-to-right background swipe */
@@ -132,7 +133,6 @@
 .gift-guide-banner__main-btn:hover::before {
   left: 0;
 }
-
 
 /* .gift-guide-banner__main-btn:hover {
   transition: color 0.4s ease;
