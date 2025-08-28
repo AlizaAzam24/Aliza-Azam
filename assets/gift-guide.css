@@ -1,7 +1,7 @@
 /* Root variables for sizing */
 :root {
   --banner-width: 1440px;
-  --banner-height: 880px;
+  --banner-height: 816px;
   --banner-btn-width: 220px;
   --banner-btn-height: 50px;
 }
@@ -15,7 +15,7 @@
   background: #fff;
   position: relative;
   width: 1440px;
-  height: 880px;
+  height: 816px;
   overflow: hidden;
 }
 
