@@ -99,7 +99,7 @@
 
 /* Banner right: image */
 .gift-guide-banner__img-side {
-  flex: 0 0 890px;
+  flex: 0 0 863px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,8 +107,8 @@
   padding-right: 24px;
 }
 .gift-guide-banner__img {
-  width: 890px;
-  height: 404px;
+  width: 863px;
+  height: 380px;
   object-fit: cover;
   display: block;
   border-radius: 16px;
@@ -261,7 +261,7 @@
 }
 .gift-guide-grid__wrapper {
   width: 1440px;
-  height: 1220px;
+  height: 1120px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
@@ -285,8 +285,8 @@
   transform: translateY(-5px) scale(1.015);
 }
 .gift-guide-grid__img {
-  width: 444px;
-  height: 433px;
+  width: 380px;
+  height: 400px;
   object-fit: cover;
   display: block;
 }
