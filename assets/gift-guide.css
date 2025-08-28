@@ -104,7 +104,7 @@
 
 .gift-guide-banner__main-btn:hover .arrow,
 .gift-guide-banner__main-btn:focus .arrow {
-  transform: translateX(6px);
+  /* transform: translateX(6px); */
 }
 
 /* .gift-guide-banner__main-btn {
