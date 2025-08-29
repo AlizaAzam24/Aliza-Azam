@@ -405,7 +405,7 @@
 .gift-guide-popup__content {
   background: #fff;
   box-shadow: 0 8px 40px rgba(0,0,0,0.17);
-  padding: 36px 34px 34px 34px;
+  padding: 36px 34px 34px 20px;
   width: 311px;
   height: 447px;
   z-index: 2;
@@ -416,12 +416,12 @@
 }
 .gift-guide-popup__close {
   position: absolute;
-  right: 18px;
+  left: 278.8px;
   top: 12.7px;
   background: none;
-  border: none;
-  font-size: 2.1rem;
-  color: #f8f8f8;
+  border: 1.5px;
+  font-size: 1.5rem;
+  color: #000;
   cursor: pointer;
 }
 .gift-guide-popup__img {
