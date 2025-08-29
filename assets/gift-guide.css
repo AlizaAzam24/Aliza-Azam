@@ -505,7 +505,7 @@
   cursor: pointer;
   transition: background 0.22s, transform 0.18s;
   letter-spacing: 0.02em;
-  margin: 30px 20px 0 20px;
+  margin: 30px 10px 10px 15px;
   font-family: 'Inter', Arial, sans-serif;
 }
 .gift-guide-popup__atc-btn:hover {
