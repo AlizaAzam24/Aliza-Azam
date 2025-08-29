@@ -406,8 +406,8 @@
   background: #fff;
   box-shadow: 0 8px 40px rgba(0,0,0,0.17);
   padding: 36px 34px 34px 34px;
-  min-width: 375px;
-  max-width: 380px;
+  width: 311px;
+  height: 447px;
   z-index: 2;
   position: relative;
   display: flex;
@@ -417,19 +417,18 @@
 .gift-guide-popup__close {
   position: absolute;
   right: 18px;
-  top: 16px;
+  top: 12.7px;
   background: none;
   border: none;
   font-size: 2.1rem;
-  color: #444;
+  color: #f8f8f8;
   cursor: pointer;
 }
 .gift-guide-popup__img {
   width: 120px;
   height: 140px;
   object-fit: cover;
-  /* border-radius: 0px; */
-  margin-bottom: 11px;
+  margin-top: 11px;
 }
 .gift-guide-popup__product-title {
   font-size: 16px;
