@@ -452,8 +452,8 @@
   margin-bottom: 17px;
 }
 .gift-guide-popup__variant-label {
-  font-size: 0.99rem;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 300;
   margin-bottom: 4px;
   color: #111;
 }
@@ -478,7 +478,7 @@
 }
 .gift-guide-popup__color-btn.selected,
 .gift-guide-popup__color-btn:hover {
-  color: #000;
+  color: #fff;
   background: #000;
 }
 .gift-guide-popup__sizes {
