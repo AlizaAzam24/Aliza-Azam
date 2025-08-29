@@ -463,9 +463,9 @@
   margin-bottom: 15px;
 }
 .gift-guide-popup__color-btn {
-  width: 270px;
+  width: 145px;
   height: 40px;
-  padding: 7px 0;
+  padding: 7px 0 20px 0;
   border: 1px solid #000;
   background: #fff;
   cursor: pointer;
