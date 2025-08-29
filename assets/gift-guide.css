@@ -353,7 +353,7 @@
 }
 .gift-guide-grid__item {
   background: #fff;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   overflow: hidden;
   cursor: pointer;
   position: relative;
