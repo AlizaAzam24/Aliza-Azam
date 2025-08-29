@@ -38,7 +38,7 @@
 /* Banner left: text */
 .gift-guide-banner__text-side {
   flex: 1 1 0;
-  padding-left: 50px;
+  padding-left: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
