@@ -416,7 +416,7 @@
 }
 .gift-guide-popup__close {
   position: absolute;
-  left: 260px;
+  left: 275px;
   top: 10px;
   background: none;
   border: 0.5px;
@@ -505,7 +505,7 @@
   cursor: pointer;
   transition: background 0.22s, transform 0.18s;
   letter-spacing: 0.02em;
-  margin: 30px 10px 10px 15px;
+  margin: 30px 6px 6px 15px;
   font-family: 'Inter', Arial, sans-serif;
 }
 .gift-guide-popup__atc-btn:hover {
