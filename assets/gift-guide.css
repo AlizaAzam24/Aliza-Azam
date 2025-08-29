@@ -416,11 +416,11 @@
 }
 .gift-guide-popup__close {
   position: absolute;
-  left: 278.8px;
+  left: 260px;
   top: 10px;
   background: none;
   border: 0.5px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #000;
   cursor: pointer;
 }
@@ -481,7 +481,7 @@
 }
 .gift-guide-popup__sizes {
   width: 271px;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
 }
 .gift-guide-popup__size-select {
   width: 271px;
