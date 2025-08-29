@@ -339,7 +339,7 @@
   font-weight: 400;
   font-size: 36px;
   /* margin-bottom: 24px; */
-  padding-left: 15px;
+  padding: 20px 0 0 15px;
   color: #181818;
 }
 .gift-guide-grid__wrapper {
@@ -347,9 +347,9 @@
   height: 1120px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: 12px;
   margin: 0 auto;
-  background: #f7f7f9;
+  background: #fff;
 }
 .gift-guide-grid__item {
   background: #fff;
