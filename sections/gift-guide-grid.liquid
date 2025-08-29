@@ -5,8 +5,8 @@
       {% assign product = all_products[block.settings.product] %}
       {% if product %}
         <div class="gift-guide-grid__item" data-product-index="{{ forloop.index0 }}">
-          <img src="{{ product.featured_image | img_url: '400x450' }}"
-            alt="{{ product.title }}" class="gift-guide-grid__img" width="400" height="450">
+          <img src="{{ product.featured_image | img_url: '450x500' }}"
+            alt="{{ product.title }}" class="gift-guide-grid__img" width="450" height="500">
           <span class="gift-guide-grid__plus" data-product-index="{{ forloop.index0 }}">+</span>
         </div>
       {% endif %}
