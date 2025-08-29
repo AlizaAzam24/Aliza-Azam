@@ -428,7 +428,7 @@
   width: 120px;
   height: 140px;
   object-fit: cover;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .gift-guide-popup__product-title {
   font-size: 16px;
@@ -453,13 +453,13 @@
 .gift-guide-popup__variant-label {
   font-size: 14px;
   font-weight: 400;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   color: #333;
 }
 .gift-guide-popup__colors {
   display: flex;
   /* gap: 8px; */
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .gift-guide-popup__color-btn {
   width: 135px;
@@ -481,14 +481,13 @@
 }
 .gift-guide-popup__sizes {
   width: 271px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 .gift-guide-popup__size-select {
   width: 271px;
   padding: 7px 12px;
   border: 1px solid #000;
   font-size: 16px;
-  margin-bottom: 5px;
 }
 .gift-guide-popup__atc-btn {
   width: 271px;
@@ -506,7 +505,7 @@
   cursor: pointer;
   transition: background 0.22s, transform 0.18s;
   letter-spacing: 0.02em;
-  margin-top: 16px;
+  margin-top: 10px;
   font-family: 'Inter', Arial, sans-serif;
 }
 .gift-guide-popup__atc-btn:hover {
