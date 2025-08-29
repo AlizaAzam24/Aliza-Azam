@@ -368,8 +368,8 @@
   transform: translateY(-5px) scale(1.015);
 } */
 .gift-guide-grid__img {
-  width: 270px;
-  height: 300px;
+  width: 400px;
+  height: 450px;
   object-fit: cover;
   display: block;
 }
