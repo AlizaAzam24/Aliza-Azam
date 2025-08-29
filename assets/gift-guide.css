@@ -343,7 +343,7 @@
   color: #181818;
 }
 .gift-guide-grid__wrapper {
-  width: 1440px;
+  width: 1400px;
   height: 1120px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
