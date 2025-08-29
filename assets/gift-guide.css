@@ -338,9 +338,8 @@
   font-family: 'Lustria', 'Inter', Arial, sans-serif;
   font-weight: 400;
   font-size: 36px;
-  margin-top: 24px;
   margin-bottom: 24px;
-  padding-left: 24px;
+  padding-left: 10px;
   color: #181818;
 }
 .gift-guide-grid__wrapper {
