@@ -459,7 +459,7 @@
 .gift-guide-popup__colors {
   display: flex;
   /* gap: 8px; */
-  margin: 0 20px 20px 5px;
+  margin: 0 20px 20px 2px;
 }
 .gift-guide-popup__color-btn {
   width: 135px;
@@ -481,7 +481,6 @@
 }
 .gift-guide-popup__sizes {
   width: 271px;
-  /* margin-bottom: 5px; */
 }
 .gift-guide-popup__size-select {
   width: 271px;
@@ -505,7 +504,7 @@
   cursor: pointer;
   transition: background 0.22s, transform 0.18s;
   letter-spacing: 0.02em;
-  margin: 30px 8px 20px 8px;
+  margin: 40px 20px 25px 20px;
   font-family: 'Inter', Arial, sans-serif;
 }
 .gift-guide-popup__atc-btn:hover {
