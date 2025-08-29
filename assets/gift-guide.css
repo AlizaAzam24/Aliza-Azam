@@ -330,7 +330,7 @@
 .gift-guide-grid {
   background: #fff;
   max-width: var(--banner-width);
-  margin: 0 auto;
+  /* margin: 0 auto; */
   /* padding: 40px 0 40px 0; */
   min-height: 650px;
 }
@@ -339,7 +339,7 @@
   font-weight: 400;
   font-size: 36px;
   /* margin-bottom: 24px; */
-  padding: 20px 0 0 15px;
+  padding: 30px 0 0 20px;
   color: #181818;
 }
 .gift-guide-grid__wrapper {
