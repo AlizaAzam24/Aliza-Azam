@@ -419,8 +419,8 @@
   left: 275px;
   top: 10px;
   background: none;
-  border: 0.5px;
-  font-size: 1.5rem;
+  border: 0.3px;
+  font-size: 1.7rem;
   color: #000;
   cursor: pointer;
 }
@@ -444,7 +444,7 @@
 .gift-guide-popup__product-desc {
   font-size: 14px;
   color: #000;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   line-height: 1.4;
 }
 /* .gift-guide-popup__variants {
@@ -453,13 +453,13 @@
 .gift-guide-popup__variant-label {
   font-size: 14px;
   font-weight: 400;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   color: #333;
 }
 .gift-guide-popup__colors {
   display: flex;
   /* gap: 8px; */
-  margin: 0 20px 20px 2px;
+  margin: 0 20px 20px 0;
 }
 .gift-guide-popup__color-btn {
   width: 135px;
@@ -504,7 +504,7 @@
   cursor: pointer;
   transition: background 0.22s, transform 0.18s;
   letter-spacing: 0.02em;
-  margin: 40px 20px 25px 20px;
+  margin: 40px 0 25px 5px;
   font-family: 'Inter', Arial, sans-serif;
 }
 .gift-guide-popup__atc-btn:hover {
