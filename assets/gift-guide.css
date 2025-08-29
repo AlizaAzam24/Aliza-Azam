@@ -448,14 +448,14 @@
   margin-bottom: 14px;
   line-height: 1.4;
 }
-.gift-guide-popup__variants {
+/* .gift-guide-popup__variants {
   margin-bottom: 17px;
-}
+} */
 .gift-guide-popup__variant-label {
   font-size: 14px;
   font-weight: 300;
   margin-bottom: 4px;
-  color: #111;
+  color: #333;
 }
 .gift-guide-popup__colors {
   display: flex;
