@@ -363,10 +363,10 @@
 .gift-guide-grid__item:focus {
   outline: 2px solid #ffe940;
 }
-.gift-guide-grid__item:hover {
+/* .gift-guide-grid__item:hover {
   box-shadow: 0 12px 32px rgba(0,0,0,0.13);
   transform: translateY(-5px) scale(1.015);
-}
+} */
 .gift-guide-grid__img {
   width: 330px;
   height: 380px;
