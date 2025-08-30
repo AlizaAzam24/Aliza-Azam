@@ -106,16 +106,16 @@ document.addEventListener('DOMContentLoaded', function() {
           '</div>' +
         '</div>' +
 
-      '<div class="gift-guide-popup__bottom">' +
-        (colorIndex !== -1 ? '<div class="gift-guide-popup__variant-label">Color</div>' : '') +
-        '<div class="gift-guide-popup__colors">' + colorsHtml + '</div>' +
-        (sizeIndex !== -1 ? '<div class="gift-guide-popup__variant-label">Size</div>' : '') +
-        '<select class="gift-guide-popup__size-select">' + sizesHtml + '</select>' +
-        '<button class="gift-guide-popup__atc-btn" type="button">' +
-          'ADD TO CART <span class="gift-guide-popup__atc-arrow">→</span>' +
-        '</button>' +
-      '</div>';
-}
+        '<div class="gift-guide-popup__bottom">' +
+          (colorIndex !== -1 ? '<div class="gift-guide-popup__variant-label">Color</div>' : '') +
+          '<div class="gift-guide-popup__colors">' + colorsHtml + '</div>' +
+          (sizeIndex !== -1 ? '<div class="gift-guide-popup__variant-label">Size</div>' : '') +
+          '<select class="gift-guide-popup__size-select">' + sizesHtml + '</select>' +
+          '<button class="gift-guide-popup__atc-btn" type="button">' +
+            'ADD TO CART <span class="gift-guide-popup__atc-arrow">→</span>' +
+          '</button>' +
+          '</div>';
+    }
 
   // // Build color buttons
   // let colorsHtml = colors.map(function(color) {
