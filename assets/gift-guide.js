@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
               (window.Shopify && Shopify.formatMoney ? Shopify.formatMoney(product.price) : product.price / 100 + ' USD') + 
             '</div>' +
           '<div class="gift-guide-popup__product-desc">' + product.description + '</div>' +
+          '</div>' +
         '</div>' +
-      '</div>' +
 
       '<div class="gift-guide-popup__bottom">' +
         (colorIndex !== -1 ? '<div class="gift-guide-popup__variant-label">Color</div>' : '') +
