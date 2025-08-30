@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
       let sizesHtml = '<option value="">Choose your size</option>' +
         sizes.map(function(size) {
           return '<option value="' + size + '">' + size + '</option>';
-        }).join('');
+      }).join('');
 
       // Build popup HTML → COLOR FIRST, SIZE SECOND
       document.getElementById('gift-guide-popup-dynamic').innerHTML =
