@@ -117,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
       '</button>' +
     '</div>';
 }
-
   // function renderGiftGuidePopup(product) {
   //   // Extract option names (e.g. Color, Size) and unique values
   //   var option1Name = product.options[0] || '';
