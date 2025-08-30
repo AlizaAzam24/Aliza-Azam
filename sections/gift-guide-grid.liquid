@@ -4,9 +4,14 @@
     {% for block in section.blocks %}
       {% assign product = all_products[block.settings.product] %}
       {% if product %}
-        <div class="gift-guide-grid__item" data-product-index="{{ forloop.index0 }}">
+        {% comment %} <div class="gift-guide-grid__item" data-product-index="{{ forloop.index0 }}">
           <img src="{{ product.featured_image | img_url: '470x550' }}"
             alt="{{ product.title }}" class="gift-guide-grid__img" width="470" height="550">
+          <span class="gift-guide-grid__plus" data-product-index="{{ forloop.index0 }}">+</span>
+        </div> {% endcomment %}
+        <div class="gift-guide-grid__item" data-handle="{{ product.handle }}" data-product-index="{{ forloop.index0 }}">
+          <img src="{{ product.featured_image | img_url: width: 444, height: 433 }}" alt="{{ product.title }}" 
+            class="gift-guide-grid__img"/>
           <span class="gift-guide-grid__plus" data-product-index="{{ forloop.index0 }}">+</span>
         </div>
       {% endif %}
@@ -15,32 +20,14 @@
   <!-- Popup -->
   <div id="gift-guide-popup" class="gift-guide-popup" style="display:none;">
     <div class="gift-guide-popup__content">
+      <!-- Close Button -->
       <button class="gift-guide-popup__close" aria-label="Close popup">&times;</button>
-      <img class="gift-guide-popup__img" id="popup-product-img" src="" alt="" width="" height="" />
-      <div class="gift-guide-popup__product-title" id="popup-product-title"></div>
-      <div class="gift-guide-popup__product-price" id="popup-product-price"></div>
-      <div class="gift-guide-popup__product-desc" id="popup-product-desc"></div>
-      <div class="gift-guide-popup__variant-label">Color</div>
-      <div class="gift-guide-popup__colors" id="popup-product-colors">
-        <button class="gift-guide-popup__color-btn">White</button>
-        <button class="gift-guide-popup__color-btn">Black</button>
-      </div>
-      <div class="gift-guide-popup__variant-label">Size</div>
-      <div class="gift-guide-popup__sizes">
-        <select class="gift-guide-popup__size-select" id="popup-product-size" label="Choose your size">
-          {% comment %} <option>Choose your size</option> {% endcomment %}
-          <option>XS</option>
-          <option>S</option>
-          <option>M</option>
-          <option>L</option>
-          <option>XL</option>
-        </select>
-      </div>
-      <button class="gift-guide-popup__atc-btn">
-        ADD TO CART <span class="gift-guide-popup__atc-arrow">&rarr;</span>
-      </button>
+    
+      <!-- Dynamic container (JS will inject HTML here) -->
+      <div id="gift-guide-popup-dynamic"></div>
     </div>
   </div>
+
 </section>
 
 {% schema %}
