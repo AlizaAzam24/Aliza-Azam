@@ -81,19 +81,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Build popup HTML
     document.getElementById('gift-guide-popup-dynamic').innerHTML =
-      '<img class="gift-guide-popup__img" src="' + product.featured_image + '" alt="' + product.title + '">' +
-      '<div class="gift-guide-popup__product-title">' + product.title + '</div>' +
-      '<div class="gift-guide-popup__product-price">' + (window.Shopify && Shopify.formatMoney ? Shopify.formatMoney(product.price) : product.price / 100 + ' USD') + '</div>' +
-      '<div class="gift-guide-popup__product-desc">' + product.description + '</div>' +
-      '<div class="gift-guide-popup__variants">' +
-        (option1Name ? '<div class="gift-guide-popup__variant-label">' + option1Name + '</div>' : '') +
-        '<div class="gift-guide-popup__colors">' + colorsHtml + '</div>' +
-        (option2Name ? '<div class="gift-guide-popup__variant-label">' + option2Name + '</div>' : '') +
-        '<select class="gift-guide-popup__size-select">' + sizesHtml + '</select>' +
+      '<div class="gift-guide-popup__top">' +
+        '<div class="gift-guide-popup__left">' +
+          '<img class="gift-guide-popup__img" src="' + product.featured_image + '" alt="' + product.title + '">' +
+        '</div>' +
+      '<div class="gift-guide-popup__right">' +
+        '<div class="gift-guide-popup__product-title">' + product.title + '</div>' +
+        '<div class="gift-guide-popup__product-price">' + 
+          (window.Shopify && Shopify.formatMoney ? Shopify.formatMoney(product.price) : product.price / 100 + ' USD') + 
+        '</div>' +
+        '<div class="gift-guide-popup__product-desc">' + product.description + '</div>' +
       '</div>' +
-      '<button class="gift-guide-popup__atc-btn" type="button">' +
-        'ADD TO CART <span class="gift-guide-popup__atc-arrow">→</span>' +
-      '</button>';
+    '</div>' +
+    '<div class="gift-guide-popup__bottom">' +
+      (option1Name ? '<div class="gift-guide-popup__variant-label">' + option1Name + '</div>' : '') +
+      '<div class="gift-guide-popup__colors">' + colorsHtml + '</div>' +
+      (option2Name ? '<div class="gift-guide-popup__variant-label">' + option2Name + '</div>' : '') +
+      '<select class="gift-guide-popup__size-select">' + sizesHtml + '</select>' +
+        '<button class="gift-guide-popup__atc-btn" type="button">' +
+          'ADD TO CART <span class="gift-guide-popup__atc-arrow">→</span>' +
+        '</button>' +
+      '</div>';
+
+    // document.getElementById('gift-guide-popup-dynamic').innerHTML =
+    //   '<img class="gift-guide-popup__img" src="' + product.featured_image + '" alt="' + product.title + '">' +
+    //   '<div class="gift-guide-popup__product-title">' + product.title + '</div>' +
+    //   '<div class="gift-guide-popup__product-price">' + (window.Shopify && Shopify.formatMoney ? Shopify.formatMoney(product.price) : product.price / 100 + ' USD') + '</div>' +
+    //   '<div class="gift-guide-popup__product-desc">' + product.description + '</div>' +
+    //   '<div class="gift-guide-popup__variants">' +
+    //     (option1Name ? '<div class="gift-guide-popup__variant-label">' + option1Name + '</div>' : '') +
+    //     '<div class="gift-guide-popup__colors">' + colorsHtml + '</div>' +
+    //     (option2Name ? '<div class="gift-guide-popup__variant-label">' + option2Name + '</div>' : '') +
+    //     '<select class="gift-guide-popup__size-select">' + sizesHtml + '</select>' +
+    //   '</div>' +
+    //   '<button class="gift-guide-popup__atc-btn" type="button">' +
+    //     'ADD TO CART <span class="gift-guide-popup__atc-arrow">→</span>' +
+    //   '</button>';
 
     // Color selection event
     var colorBtns = document.querySelectorAll('.gift-guide-popup__color-btn');
