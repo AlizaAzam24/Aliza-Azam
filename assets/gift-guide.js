@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
       let sizesHtml = '<option value="">Choose your size</option>' +
         sizes.map(function(size) {
           return '<option value="' + size + '">' + size + '</option>';
-      }).join('');
+        }).join('');
 
       // Build popup HTML → COLOR FIRST, SIZE SECOND
       document.getElementById('gift-guide-popup-dynamic').innerHTML =
@@ -114,8 +114,8 @@ document.addEventListener('DOMContentLoaded', function() {
           '<button class="gift-guide-popup__atc-btn" type="button">' +
             'ADD TO CART <span class="gift-guide-popup__atc-arrow">→</span>' +
           '</button>' +
-          '</div>';
-      }
+        '</div>';
+    }
 
   // // Build color buttons
   // let colorsHtml = colors.map(function(color) {
