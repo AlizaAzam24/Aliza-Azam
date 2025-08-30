@@ -893,6 +893,20 @@
 } */
 
 /* Responsive adjustments */
+@media (max-width: 480px) {
+  .gift-guide-popup__top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gift-guide-popup__right {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .gift-guide-popup__variant-label {
+    align-self: center;
+  }
+}
+/* --------------------------------------------------- */
 @media (max-width: 1440px) {
   .gift-guide-banner,
   .gift-guide-banner__hero-img,
