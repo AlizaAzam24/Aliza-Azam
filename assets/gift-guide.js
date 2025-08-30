@@ -96,11 +96,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
       '<div class="gift-guide-popup__bottom">' +
         // ✅ Color first
-        (option1Name ? '<div class="gift-guide-popup__variant-label">' + option1Name + '</div>' : '') +
+        (option1Name ? '<div class="gift-guide-popup__variant-label">' + Color + '</div>' : '') +
         '<div class="gift-guide-popup__colors">' + colorsHtml + '</div>' +
 
         // ✅ Size second
-        (option2Name ? '<div class="gift-guide-popup__variant-label">' + option2Name + '</div>' : '') +
+        (option2Name ? '<div class="gift-guide-popup__variant-label">' + Size + '</div>' : '') +
         '<select class="gift-guide-popup__size-select">' + sizesHtml + '</select>' +
 
         // ✅ Add to Cart
