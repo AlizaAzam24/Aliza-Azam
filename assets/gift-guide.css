@@ -504,6 +504,47 @@
   transform: scale(1.04);
 }
 /* Popup */
+.gift-guide-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.21);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Popup container */
+.gift-guide-popup__content {
+  background: #fff;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.17);
+  padding: 25px 20px 40px;
+  width: 320px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 6px;
+}
+
+/* Close button */
+.gift-guide-popup__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #000;
+  cursor: pointer;
+}
+
 /* Top section: image left, info right */
 .gift-guide-popup__top {
   display: flex;
@@ -618,47 +659,6 @@
   background: #000;
   transform: scale(1.04);
 }
-
-/*.gift-guide-popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.21);
-  z-index: 2000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Popup container */
-/* .gift-guide-popup__content {
-  background: #fff;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.17);
-  padding: 25px 20px 40px;
-  width: 320px;
-  max-width: 90%;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border-radius: 6px;
-} */
-
-/* Close button */
-/* .gift-guide-popup__close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  color: #000;
-  cursor: pointer;
-} */
 
 /* Product Image
 .gift-guide-popup__img {
@@ -893,20 +893,6 @@
 } */
 
 /* Responsive adjustments */
-@media (max-width: 480px) {
-  .gift-guide-popup__top {
-    flex-direction: column;
-    align-items: center;
-  }
-  .gift-guide-popup__right {
-    text-align: center;
-    margin-top: 10px;
-  }
-  .gift-guide-popup__variant-label {
-    align-self: center;
-  }
-}
-/* --------------------------------------------------- */
 @media (max-width: 1440px) {
   .gift-guide-banner,
   .gift-guide-banner__hero-img,
