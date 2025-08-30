@@ -55,59 +55,133 @@ document.addEventListener('DOMContentLoaded', function() {
    * Renders the product popup with dynamic variant selectors and "Add to Cart".
    * @param {object} product - Shopify product object from /products/{handle}.js
    */
-  function renderGiftGuidePopup(product) {
-    // Extract option names (e.g. Color, Size) and unique values
-    var option1Name = product.options[0] || '';
-    var option2Name = product.options[1] || '';
-    var colors = [];
-    var sizes = [];
-    product.variants.forEach(function(v) {
-      if (option1Name && colors.indexOf(v.option1) === -1) colors.push(v.option1);
-      if (option2Name && sizes.indexOf(v.option2) === -1) sizes.push(v.option2);
-    });
+    function renderGiftGuidePopup(product) {
+      // Identify which option is Color and which is Size
+      let colorIndex = product.options.findIndex(opt => opt.toLowerCase() === 'color');
+      let sizeIndex = product.options.findIndex(opt => opt.toLowerCase() === 'size');
 
-    // Default selection
-    var selectedColor = colors[0] || '';
-    var selectedSize = sizes[0] || '';
-    // Build color buttons
-    var colorsHtml = colors.map(function(color) {
-      return '<button type="button" class="gift-guide-popup__color-btn' + (color === selectedColor ? ' selected' : '') + '" data-color="' + color + '">' + color + '</button>';
-    }).join('');
-    // Build size dropdown
-    var sizesHtml = '<option value="">Choose your size</option>' +
-      sizes.map(function(size) {
-        return '<option value="' + size + '">' + size + '</option>';
+      let colors = [];
+      let sizes = [];
+
+      product.variants.forEach(function(v) {
+        if (colorIndex !== -1) {
+          let color = v.options[colorIndex];
+          if (colors.indexOf(color) === -1) colors.push(color);
+        }
+        if (sizeIndex !== -1) {
+          let size = v.options[sizeIndex];
+          if (sizes.indexOf(size) === -1) sizes.push(size);
+        }
+      });
+
+      // Default selections
+      let selectedColor = colors[0] || '';
+      let selectedSize = sizes[0] || '';
+
+      // Build color buttons
+      let colorsHtml = colors.map(function(color) {
+        return '<button type="button" class="gift-guide-popup__color-btn' +
+          (color === selectedColor ? ' selected' : '') +
+          '" data-color="' + color + '">' + color + '</button>';
       }).join('');
 
-    // Build popup HTML
-    document.getElementById('gift-guide-popup-dynamic').innerHTML =
-      '<div class="gift-guide-popup__top">' +
-        '<div class="gift-guide-popup__left">' +
-          '<img class="gift-guide-popup__img" src="' + product.featured_image + '" alt="' + product.title + '">' +
-        '</div>' +
-        '<div class="gift-guide-popup__right">' +
-          '<div class="gift-guide-popup__product-title">' + product.title + '</div>' +
-          '<div class="gift-guide-popup__product-price">' + 
-            (window.Shopify && Shopify.formatMoney ? Shopify.formatMoney(product.price) : product.price / 100 + ' USD') + 
+      // Build size dropdown
+      let sizesHtml = '<option value="">Choose your size</option>' +
+        sizes.map(function(size) {
+          return '<option value="' + size + '">' + size + '</option>';
+        }).join('');
+
+      // Build popup HTML → COLOR FIRST, SIZE SECOND
+      document.getElementById('gift-guide-popup-dynamic').innerHTML =
+        '<div class="gift-guide-popup__top">' +
+          '<div class="gift-guide-popup__left">' +
+            '<img class="gift-guide-popup__img" src="' + product.featured_image + '" alt="' + product.title + '">' +
           '</div>' +
+          '<div class="gift-guide-popup__right">' +
+            '<div class="gift-guide-popup__product-title">' + product.title + '</div>' +
+            '<div class="gift-guide-popup__product-price">' + 
+              (window.Shopify && Shopify.formatMoney ? Shopify.formatMoney(product.price) : product.price / 100 + ' USD') + 
+            '</div>' +
           '<div class="gift-guide-popup__product-desc">' + product.description + '</div>' +
         '</div>' +
       '</div>' +
 
       '<div class="gift-guide-popup__bottom">' +
-        // ✅ Color first
-        (option1Name ? '<div class="gift-guide-popup__variant-label">' + option1Name + '</div>' : '') +
+        (colorIndex !== -1 ? '<div class="gift-guide-popup__variant-label">Color</div>' : '') +
         '<div class="gift-guide-popup__colors">' + colorsHtml + '</div>' +
-
-        // ✅ Size second
-        (option2Name ? '<div class="gift-guide-popup__variant-label">' + option2Name + '</div>' : '') +
+        (sizeIndex !== -1 ? '<div class="gift-guide-popup__variant-label">Size</div>' : '') +
         '<select class="gift-guide-popup__size-select">' + sizesHtml + '</select>' +
-
-        // ✅ Add to Cart
         '<button class="gift-guide-popup__atc-btn" type="button">' +
           'ADD TO CART <span class="gift-guide-popup__atc-arrow">→</span>' +
         '</button>' +
       '</div>';
+}
+
+  // // Build color buttons
+  // let colorsHtml = colors.map(function(color) {
+  //   return '<button type="button" class="gift-guide-popup__color-btn' +
+  //     (color === selectedColor ? ' selected' : '') +
+  //     '" data-color="' + color + '">' + color + '</button>';
+  // }).join('');
+
+  // // Build size dropdown
+  // let sizesHtml = '<option value="">Choose your size</option>' +
+  //   sizes.map(function(size) {
+  //     return '<option value="' + size + '">' + size + '</option>';
+  //   }).join('');
+
+  //   // Extract option names (e.g. Color, Size) and unique values
+  //   var option1Name = product.options[0] || '';
+  //   var option2Name = product.options[1] || '';
+  //   var colors = [];
+  //   var sizes = [];
+  //   product.variants.forEach(function(v) {
+  //     if (option1Name && colors.indexOf(v.option1) === -1) colors.push(v.option1);
+  //     if (option2Name && sizes.indexOf(v.option2) === -1) sizes.push(v.option2);
+  //   });
+
+  //   // Default selection
+  //   var selectedColor = colors[0] || '';
+  //   var selectedSize = sizes[0] || '';
+  //   // Build color buttons
+  //   var colorsHtml = colors.map(function(color) {
+  //     return '<button type="button" class="gift-guide-popup__color-btn' + (color === selectedColor ? ' selected' : '') + '" data-color="' + color + '">' + color + '</button>';
+  //   }).join('');
+  //   // Build size dropdown
+  //   var sizesHtml = '<option value="">Choose your size</option>' +
+  //     sizes.map(function(size) {
+  //       return '<option value="' + size + '">' + size + '</option>';
+  //     }).join('');
+
+    // // Build popup HTML
+    // document.getElementById('gift-guide-popup-dynamic').innerHTML =
+    //   '<div class="gift-guide-popup__top">' +
+    //     '<div class="gift-guide-popup__left">' +
+    //       '<img class="gift-guide-popup__img" src="' + product.featured_image + '" alt="' + product.title + '">' +
+    //     '</div>' +
+    //     '<div class="gift-guide-popup__right">' +
+    //       '<div class="gift-guide-popup__product-title">' + product.title + '</div>' +
+    //       '<div class="gift-guide-popup__product-price">' + 
+    //         (window.Shopify && Shopify.formatMoney ? Shopify.formatMoney(product.price) : product.price / 100 + ' USD') + 
+    //       '</div>' +
+    //       '<div class="gift-guide-popup__product-desc">' + product.description + '</div>' +
+    //     '</div>' +
+    //   '</div>' +
+
+    //   '<div class="gift-guide-popup__bottom">' +
+    //     // ✅ Color first
+    //     (option1Name ? '<div class="gift-guide-popup__variant-label">' + option1Name + '</div>' : '') +
+    //     '<div class="gift-guide-popup__colors">' + colorsHtml + '</div>' +
+
+    //     // ✅ Size second
+    //     (option2Name ? '<div class="gift-guide-popup__variant-label">' + option2Name + '</div>' : '') +
+    //     '<select class="gift-guide-popup__size-select">' + sizesHtml + '</select>' +
+
+    //     // ✅ Add to Cart
+    //     '<button class="gift-guide-popup__atc-btn" type="button">' +
+    //       'ADD TO CART <span class="gift-guide-popup__atc-arrow">→</span>' +
+    //     '</button>' +
+    //   '</div>';
 
 
     // document.getElementById('gift-guide-popup-dynamic').innerHTML =
