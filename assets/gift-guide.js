@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
       '</div>' +
 
       '<div class="gift-guide-popup__bottom">' +
-        (option1Name ? '<div class="gift-guide-popup__variant-label">' + Color + '</div>' : '') +
+        (Color ? '<div class="gift-guide-popup__variant-label">' + Color + '</div>' : '') +
         '<div class="gift-guide-popup__colors">' + colorsHtml + '</div>' +
 
         (option2Name ? '<div class="gift-guide-popup__variant-label">' + option2Name + '</div>' : '') +
