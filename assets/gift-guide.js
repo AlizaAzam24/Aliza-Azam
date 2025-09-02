@@ -57,40 +57,71 @@ document.addEventListener('DOMContentLoaded', function() {
    */
   function renderGiftGuidePopup(product) {
     // Identify which option is Color and which is Size
+    // Detect option positions (Color vs Size)
     var option1Name = product.options[0] || '';
     var option2Name = product.options[1] || '';
+
+    var colorOptionIndex, sizeOptionIndex;
+
+    if (option1Name.toLowerCase().includes('color')) {
+      colorOptionIndex = 1;
+      sizeOptionIndex = 2;
+    } else {
+      colorOptionIndex = 2;
+      sizeOptionIndex = 1;
+    }
+
+    // Collect unique values properly
     var colors = [];
     var sizes = [];
-
+    
     product.variants.forEach(function(v) {
-      if (option1Name && colors.indexOf(v.option1) === -1) colors.push(v.option1);
-      if (option2Name && sizes.indexOf(v.option2) === -1) sizes.push(v.option2);
+      var color = (colorOptionIndex === 1 ? v.option1 : v.option2);
+      var size = (sizeOptionIndex === 1 ? v.option1 : v.option2);
+
+      if (color && colors.indexOf(color) === -1) colors.push(color);
+      if (size && sizes.indexOf(size) === -1) sizes.push(size);
     });
+
+    // var option1Name = product.options[0] || '';
+    // var option2Name = product.options[1] || '';
+    // var colors = [];
+    // var sizes = [];
+
+    // product.variants.forEach(function(v) {
+    //   if (option1Name && colors.indexOf(v.option1) === -1) colors.push(v.option1);
+    //   if (option2Name && sizes.indexOf(v.option2) === -1) sizes.push(v.option2);
+    // });
 
     // Default selections
     var selectedColor = colors[0] || '';
     var selectedSize = sizes[0] || '';
+    // var selectedColor = colors[0] || '';
+    // var selectedSize = sizes[0] || '';
 
-    
+    // Build color buttons
+    var colorsHtml = colors.map(function(color) {
+      return '<button type="button" class="gift-guide-popup__color-btn' +
+            (color === selectedColor ? ' selected' : '') +
+            '" data-color="' + color + '">' + color + '</button>';
+    }).join('');
+
+    // var colorsHtml = colors.map(function(color) {
+    //   return '<button type="button" class="gift-guide-popup__color-btn' + 
+    //         (color === selectedColor ? ' selected' : '') + 
+    //         '" data-color="' + color + '">' + color + '</button>';
+    // }).join('');
+
     // Build size dropdown
     var sizesHtml = '<option value="">Choose your size</option>' +
       sizes.map(function(size) {
         return '<option value="' + size + '">' + size + '</option>';
     }).join('');
 
-    // Build color buttons
-    var colorsHtml = colors.map(function(color) {
-      return '<button type="button" class="gift-guide-popup__color-btn' + 
-            (color === selectedColor ? ' selected' : '') + 
-            '" data-color="' + color + '">' + color + '</button>';
-    }).join('');
-
-    // // Build size dropdown
     // var sizesHtml = '<option value="">Choose your size</option>' +
     //   sizes.map(function(size) {
     //     return '<option value="' + size + '">' + size + '</option>';
     // }).join('');
-
 
     // Build popup HTML → COLOR FIRST, SIZE SECOND
     document.getElementById('gift-guide-popup-dynamic').innerHTML =
