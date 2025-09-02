@@ -57,39 +57,56 @@ document.addEventListener('DOMContentLoaded', function() {
    */
   function renderGiftGuidePopup(product) {
     // Identify which option is Color and which is Size
-    let colorIndex = product.options.findIndex(opt => opt.toLowerCase() === 'color');
-    let sizeIndex = product.options.findIndex(opt => opt.toLowerCase() === 'size');
+    var option1Name = product.options[0] || '';
+    var option2Name = product.options[1] || '';
+    var colors = [];
+    var sizes = [];
+    // let colorIndex = product.options.findIndex(opt => opt.toLowerCase() === 'color');
+    // let sizeIndex = product.options.findIndex(opt => opt.toLowerCase() === 'size');
 
-    let colors = [];
-    let sizes = [];
+    // let colors = [];
+    // let sizes = [];
 
     product.variants.forEach(function(v) {
-      if (colorIndex !== -1) {
-        let color = v.options[colorIndex];
-        if (colors.indexOf(color) === -1) colors.push(color);
-      }
-      if (sizeIndex !== -1) {
-        let size = v.options[sizeIndex];
-        if (sizes.indexOf(size) === -1) sizes.push(size);
-      }
+      if (option1Name && colors.indexOf(v.option1) === -1) colors.push(v.option1);
+      if (option2Name && sizes.indexOf(v.option2) === -1) sizes.push(v.option2);
+      // if (colorIndex !== -1) {
+      //   let color = v.options[colorIndex];
+      //   if (colors.indexOf(color) === -1) colors.push(color);
+      // }
+      // if (sizeIndex !== -1) {
+      //   let size = v.options[sizeIndex];
+      //   if (sizes.indexOf(size) === -1) sizes.push(size);
+      // }
     });
 
     // Default selections
-    let selectedColor = colors[0] || '';
-    let selectedSize = sizes[0] || '';
+    var selectedColor = colors[0] || '';
+    var selectedSize = sizes[0] || '';
+    // let selectedColor = colors[0] || '';
+    // let selectedSize = sizes[0] || '';
 
     // Build color buttons
-    let colorsHtml = colors.map(function(color) {
-      return '<button type="button" class="gift-guide-popup__color-btn' +
-        (color === selectedColor ? ' selected' : '') +
-        '" data-color="' + color + '">' + color + '</button>';
+    var colorsHtml = colors.map(function(color) {
+      return '<button type="button" class="gift-guide-popup__color-btn' + 
+            (color === selectedColor ? ' selected' : '') + 
+            '" data-color="' + color + '">' + color + '</button>';
     }).join('');
+    // let colorsHtml = colors.map(function(color) {
+    //   return '<button type="button" class="gift-guide-popup__color-btn' +
+    //     (color === selectedColor ? ' selected' : '') +
+    //     '" data-color="' + color + '">' + color + '</button>';
+    // }).join('');
 
     // Build size dropdown
-    let sizesHtml = '<option value="">Choose your size</option>' +
+    var sizesHtml = '<option value="">Choose your size</option>' +
       sizes.map(function(size) {
         return '<option value="' + size + '">' + size + '</option>';
-      }).join('');
+    }).join('');
+    // let sizesHtml = '<option value="">Choose your size</option>' +
+    //   sizes.map(function(size) {
+    //     return '<option value="' + size + '">' + size + '</option>';
+    //   }).join('');
 
     // Build popup HTML → COLOR FIRST, SIZE SECOND
     document.getElementById('gift-guide-popup-dynamic').innerHTML =
