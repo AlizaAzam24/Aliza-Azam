@@ -63,21 +63,21 @@ document.addEventListener('DOMContentLoaded', function() {
         return variantColor === selectedColor && variantSize === selectedSize;
       });
 
-    if (variant) {
-      // Update price
-      var priceElem = document.querySelector('.gift-guide-popup__product-price');
-      if (window.Shopify && Shopify.formatMoney) {
-        priceElem.textContent = Shopify.formatMoney(variant.price);
-      } else {
-        priceElem.textContent = (variant.price / 100) + ' USD';
-      }
+      if (variant) {
+        // Update price
+        var priceElem = document.querySelector('.gift-guide-popup__product-price');
+        if (window.Shopify && Shopify.formatMoney) {
+          priceElem.textContent = Shopify.formatMoney(variant.price);
+        } else {
+          priceElem.textContent = (variant.price / 100) + ' USD';
+        }
 
-      // Update image if available
-      if (variant.featured_image && variant.featured_image.src) {
-        document.querySelector('.gift-guide-popup__img').src = variant.featured_image.src;
+        // Update image if available
+        if (variant.featured_image && variant.featured_image.src) {
+          document.querySelector('.gift-guide-popup__img').src = variant.featured_image.src;
+        }
       }
     }
-  }
 
 //   function renderGiftGuidePopup(product) {
 //     // Identify which option is Color and which is Size
