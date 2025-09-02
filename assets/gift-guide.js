@@ -55,33 +55,81 @@ document.addEventListener('DOMContentLoaded', function() {
    * Renders the product popup with dynamic variant selectors and "Add to Cart".
    * @param {object} product - Shopify product object from /products/{handle}.js
    */
-  function renderGiftGuidePopup(product) {
-    // Identify which option is Color and which is Size
-    // Detect option positions (Color vs Size)
-    var option1Name = product.options[0] || '';
-    var option2Name = product.options[1] || '';
+    function updateSelectedVariant() {
+      var variant = product.variants.find(function(v) {
+        var variantColor = (colorOptionIndex === 1 ? v.option1 : v.option2);
+        var variantSize = (sizeOptionIndex === 1 ? v.option1 : v.option2);
 
-    var colorOptionIndex, sizeOptionIndex;
+        return variantColor === selectedColor && variantSize === selectedSize;
+      });
 
-    if (option1Name.toLowerCase().includes('color')) {
-      colorOptionIndex = 1;
-      sizeOptionIndex = 2;
-    } else {
-      colorOptionIndex = 2;
-      sizeOptionIndex = 1;
+    if (variant) {
+      // Update price
+      var priceElem = document.querySelector('.gift-guide-popup__product-price');
+      if (window.Shopify && Shopify.formatMoney) {
+        priceElem.textContent = Shopify.formatMoney(variant.price);
+      } else {
+        priceElem.textContent = (variant.price / 100) + ' USD';
+      }
+
+      // Update image if available
+      if (variant.featured_image && variant.featured_image.src) {
+        document.querySelector('.gift-guide-popup__img').src = variant.featured_image.src;
+      }
     }
+  }
+
+//   function renderGiftGuidePopup(product) {
+//     // Identify which option is Color and which is Size
+//     // Detect option positions (Color vs Size)
+//     function updateSelectedVariant() {
+//   var variant = product.variants.find(function(v) {
+//     var variantColor = (colorOptionIndex === 1 ? v.option1 : v.option2);
+//     var variantSize = (sizeOptionIndex === 1 ? v.option1 : v.option2);
+
+//     return variantColor === selectedColor && variantSize === selectedSize;
+//   });
+
+//   if (variant) {
+//     // Update price
+//     var priceElem = document.querySelector('.gift-guide-popup__product-price');
+//     if (window.Shopify && Shopify.formatMoney) {
+//       priceElem.textContent = Shopify.formatMoney(variant.price);
+//     } else {
+//       priceElem.textContent = (variant.price / 100) + ' USD';
+//     }
+
+//     // Update image if available
+//     if (variant.featured_image && variant.featured_image.src) {
+//       document.querySelector('.gift-guide-popup__img').src = variant.featured_image.src;
+//     }
+//   }
+// }
+
+    // var option1Name = product.options[0] || '';
+    // var option2Name = product.options[1] || '';
+
+    // var colorOptionIndex, sizeOptionIndex;
+
+    // if (option1Name.toLowerCase().includes('color')) {
+    //   colorOptionIndex = 1;
+    //   sizeOptionIndex = 2;
+    // } else {
+    //   colorOptionIndex = 2;
+    //   sizeOptionIndex = 1;
+    // }
 
     // Collect unique values properly
-    var colors = [];
-    var sizes = [];
+    // var colors = [];
+    // var sizes = [];
     
-    product.variants.forEach(function(v) {
-      var color = (colorOptionIndex === 1 ? v.option1 : v.option2);
-      var size = (sizeOptionIndex === 1 ? v.option1 : v.option2);
+    // product.variants.forEach(function(v) {
+    //   var color = (colorOptionIndex === 1 ? v.option1 : v.option2);
+    //   var size = (sizeOptionIndex === 1 ? v.option1 : v.option2);
 
-      if (color && colors.indexOf(color) === -1) colors.push(color);
-      if (size && sizes.indexOf(size) === -1) sizes.push(size);
-    });
+    //   if (color && colors.indexOf(color) === -1) colors.push(color);
+    //   if (size && sizes.indexOf(size) === -1) sizes.push(size);
+    // });
 
     // var option1Name = product.options[0] || '';
     // var option2Name = product.options[1] || '';
@@ -94,17 +142,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // });
 
     // Default selections
-    var selectedColor = colors[0] || '';
-    var selectedSize = sizes[0] || '';
+    // var selectedColor = colors[0] || '';
+    // var selectedSize = sizes[0] || '';
     // var selectedColor = colors[0] || '';
     // var selectedSize = sizes[0] || '';
 
     // Build color buttons
-    var colorsHtml = colors.map(function(color) {
-      return '<button type="button" class="gift-guide-popup__color-btn' +
-            (color === selectedColor ? ' selected' : '') +
-            '" data-color="' + color + '">' + color + '</button>';
-    }).join('');
+    // var colorsHtml = colors.map(function(color) {
+    //   return '<button type="button" class="gift-guide-popup__color-btn' +
+    //         (color === selectedColor ? ' selected' : '') +
+    //         '" data-color="' + color + '">' + color + '</button>';
+    // }).join('');
 
     // var colorsHtml = colors.map(function(color) {
     //   return '<button type="button" class="gift-guide-popup__color-btn' + 
@@ -113,10 +161,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // }).join('');
 
     // Build size dropdown
-    var sizesHtml = '<option value="">Choose your size</option>' +
-      sizes.map(function(size) {
-        return '<option value="' + size + '">' + size + '</option>';
-    }).join('');
+    // var sizesHtml = '<option value="">Choose your size</option>' +
+    //   sizes.map(function(size) {
+    //     return '<option value="' + size + '">' + size + '</option>';
+    // }).join('');
 
     // var sizesHtml = '<option value="">Choose your size</option>' +
     //   sizes.map(function(size) {
