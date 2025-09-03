@@ -20,13 +20,21 @@
   <!-- Popup -->
   <div id="gift-guide-popup" class="gift-guide-popup" style="display:none;">
     <div class="gift-guide-popup__content">
+      <button class="gift-guide-popup__close" aria-label="Close popup">&times;</button>
+      <div id="gift-guide-popup-dynamic"></div> <!-- JS will fill -->
+    </div>
+  </div>
+
+
+  {% comment %} <div id="gift-guide-popup" class="gift-guide-popup" style="display:none;">
+    <div class="gift-guide-popup__content">
       <!-- Close Button -->
       <button class="gift-guide-popup__close" aria-label="Close popup">&times;</button>
     
       <!-- Dynamic container (JS will inject HTML here) -->
       <div id="gift-guide-popup-dynamic"></div>
     </div>
-  </div>
+  </div> {% endcomment %}
 
 </section>
 
