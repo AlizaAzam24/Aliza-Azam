@@ -429,7 +429,7 @@
 /* ===== Top (image + info) ===== */
 .gift-guide-popup__top {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   margin-top: 15px;
 }
 
