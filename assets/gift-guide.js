@@ -196,6 +196,7 @@
 //   }
 // });
 
+
 document.addEventListener('DOMContentLoaded', function() {
   // Open popup when clicking a grid item
   document.querySelectorAll('.gift-guide-grid__item').forEach(function(item) {
@@ -324,4 +325,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 });
-
