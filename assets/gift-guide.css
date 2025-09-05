@@ -405,7 +405,7 @@
 .gift-guide-popup__content {
   background: #fff;
   box-shadow: 0 8px 40px rgba(0,0,0,0.2);
-  border-radius: 6px;
+  /* border-radius: 6px; */
   max-width: 350px;
   width: 100%;
   display: flex;
@@ -430,7 +430,7 @@
 .gift-guide-popup__top {
   display: flex;
   gap: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .gift-guide-popup__left {
@@ -439,8 +439,8 @@
 
 .gift-guide-popup__img {
   /* width: 100%; */
-  width: 120px;
-  height: 140px;
+  width: 140px;
+  height: 170px;
   object-fit: cover;
   /* border: 1px solid #eee; */
   /* border-radius: 4px; */
@@ -473,7 +473,7 @@
 
 .gift-guide-popup__product-desc {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1;
   color: #555;
   font-family: 'Jost';
 }
