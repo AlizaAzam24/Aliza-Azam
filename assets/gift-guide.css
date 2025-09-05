@@ -661,7 +661,7 @@
   transform: scale(1.04);
 } */
 
-/* Product Image
+/* Product Image */
 .gift-guide-popup__img {
   width: 140px;
   height: 170px;
@@ -669,14 +669,14 @@
   margin-bottom: 12px;
 }
 
-/* Product Title
+/* Product Title */
 .gift-guide-popup__product-title {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 4px;
 }
 
-/* Product Price 
+/* Product Price */
 .gift-guide-popup__product-price {
   font-size: 16px;
   font-weight: 600;
@@ -684,7 +684,7 @@
   margin-bottom: 6px;
 }
 
-/* Product Description 
+/* Product Description */
 .gift-guide-popup__product-desc {
   font-size: 14px;
   color: #444;
@@ -692,7 +692,7 @@
   line-height: 1.5;
 }
 
-/* Variant label (Color, Size, etc.) 
+/* Variant label (Color, Size, etc.) */
 .gift-guide-popup__variant-label {
   font-size: 14px;
   font-weight: 500;
@@ -700,7 +700,7 @@
   color: #333;
 }
 
-/* Color buttons 
+/* Color buttons */
 .gift-guide-popup__colors {
   display: flex;
   flex-wrap: wrap;
@@ -729,17 +729,17 @@
 }
 
 /* Size dropdown */
-/* .gift-guide-popup__size-select {
+.gift-guide-popup__size-select {
   width: 100%;
   padding: 8px 12px;
   border: 1px solid #000;
   font-size: 14px;
   margin-bottom: 20px;
   border-radius: 3px;
-} */
+}
 
 /* Add to Cart Button */
-/* .gift-guide-popup__atc-btn {
+.gift-guide-popup__atc-btn {
   width: 100%;
   height: 45px;
   background: #111;
@@ -755,16 +755,16 @@
   transition: background 0.25s, transform 0.18s;
   letter-spacing: 0.02em;
   border-radius: 3px;
-} */
+}
 
-/* .gift-guide-popup__atc-btn:hover {
+.gift-guide-popup__atc-btn:hover {
   background: #000;
   transform: scale(1.04);
 }
 
 .gift-guide-popup__atc-arrow {
   font-size: 1.2em;
-} */ 
+} 
 /* ------------------------------------------------------------- */
 /* Popup styles
 /* Default Desktop Layout */
