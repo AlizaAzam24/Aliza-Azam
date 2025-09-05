@@ -557,7 +557,7 @@
 
 .gift-guide-popup__left {
   flex: 0 0 130px; /* control image width */
-}
+/* }
 
 .gift-guide-popup__img {
   width: 100%;
