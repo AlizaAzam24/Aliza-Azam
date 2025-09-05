@@ -439,8 +439,8 @@
 
 .gift-guide-popup__img {
   width: 100%;
-  max-width: 240px;
-  height: auto;
+  width: 120px;
+  height: 140px;
   object-fit: cover;
   border: 1px solid #eee;
   border-radius: 4px;
@@ -454,17 +454,19 @@
 }
 
 .gift-guide-popup__product-title {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 300;
   margin-bottom: 6px;
   color: #111;
+  font-family: 'Jost';
 }
 
 .gift-guide-popup__product-price {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 12px;
   color: #444;
+  font-family: 'Lustria';
 }
 
 .gift-guide-popup__product-desc {
