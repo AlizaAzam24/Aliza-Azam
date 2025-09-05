@@ -457,7 +457,7 @@
 .gift-guide-popup__product-title {
   font-size: 16px;
   font-weight: 300;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   top: 50px;
   left: 145px;
   color: #111;
@@ -467,7 +467,7 @@
 .gift-guide-popup__product-price {
   font-size: 16px;
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #444;
   font-family: 'Lustria';
 }
