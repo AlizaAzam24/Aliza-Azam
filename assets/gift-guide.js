@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //     return '<option value="' + size + '">' + size + '</option>';
     // }).join('');
 
-    Build popup HTML → COLOR FIRST, SIZE SECOND
+    //Build popup HTML → COLOR FIRST, SIZE SECOND//
     document.getElementById('gift-guide-popup-dynamic').innerHTML =
       '<div class="gift-guide-popup__top">' +
         '<div class="gift-guide-popup__left">' +
@@ -184,28 +184,28 @@ document.addEventListener('DOMContentLoaded', function() {
       '</div>'
     ;
 
-  // // Build color buttons
-  // let colorsHtml = colors.map(function(color) {
-  //   return '<button type="button" class="gift-guide-popup__color-btn' +
-  //     (color === selectedColor ? ' selected' : '') +
-  //     '" data-color="' + color + '">' + color + '</button>';
-  // }).join('');
+  // Build color buttons
+  let colorsHtml = colors.map(function(color) {
+    return '<button type="button" class="gift-guide-popup__color-btn' +
+      (color === selectedColor ? ' selected' : '') +
+      '" data-color="' + color + '">' + color + '</button>';
+  }).join('');
 
-  // // Build size dropdown
-  // let sizesHtml = '<option value="">Choose your size</option>' +
-  //   sizes.map(function(size) {
-  //     return '<option value="' + size + '">' + size + '</option>';
-  //   }).join('');
+  // Build size dropdown
+  let sizesHtml = '<option value="">Choose your size</option>' +
+    sizes.map(function(size) {
+      return '<option value="' + size + '">' + size + '</option>';
+    }).join('');
 
-  //   // Extract option names (e.g. Color, Size) and unique values
-  //   var option1Name = product.options[0] || '';
-  //   var option2Name = product.options[1] || '';
-  //   var colors = [];
-  //   var sizes = [];
-  //   product.variants.forEach(function(v) {
-  //     if (option1Name && colors.indexOf(v.option1) === -1) colors.push(v.option1);
-  //     if (option2Name && sizes.indexOf(v.option2) === -1) sizes.push(v.option2);
-  //   });
+    // Extract option names (e.g. Color, Size) and unique values
+    var option1Name = product.options[0] || '';
+    var option2Name = product.options[1] || '';
+    var colors = [];
+    var sizes = [];
+    product.variants.forEach(function(v) {
+      if (option1Name && colors.indexOf(v.option1) === -1) colors.push(v.option1);
+      if (option2Name && sizes.indexOf(v.option2) === -1) sizes.push(v.option2);
+    });
 
   //   // Default selection
   //   var selectedColor = colors[0] || '';
