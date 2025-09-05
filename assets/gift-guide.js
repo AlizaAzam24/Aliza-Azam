@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }).join('');
 
     //Build size dropdown
-    var sizesHtml = '<option value="">Choose your size</option>' +
+    var sizesHtml = '<option value="">Choose your Color</option>' +
       sizes.map(function(size) {
         return '<option value="' + size + '">' + size + '</option>';
     }).join('');
