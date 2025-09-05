@@ -1,4 +1,4 @@
-<section class="gift-guide-grid">
+{% comment %} <section class="gift-guide-grid">
   <h2 class="gift-guide-grid__title">Tisso vison in the wild</h2>
   <div class="gift-guide-grid__wrapper">
     {% for block in section.blocks %}
@@ -52,9 +52,9 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %} {% endcomment %}
 
-{% comment %} <section class="gift-guide-grid">
+<section class="gift-guide-grid">
   <h2 class="gift-guide-grid__title">
     {{ section.settings.grid_title }}
   </h2>
@@ -115,4 +115,4 @@
     }
   ]
 }
- {% endcomment %}
+{% endschema %}
