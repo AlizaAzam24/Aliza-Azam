@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //Build size dropdown
     var sizesHtml = '<option value="">Choose your size</option>' +
       sizes.map(function(size) {
-        return '<option value="' + size + '">' + size + '</option>';
+        return '<option value="' + size + '"> + size + </option>';
     }).join('');
 
     //Build popup HTML → COLOR FIRST, SIZE SECOND//
