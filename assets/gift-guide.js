@@ -129,8 +129,8 @@ document.addEventListener('DOMContentLoaded', function() {
     Default selections
     var selectedColor = colors[0] || '';
     var selectedSize = sizes[0] || '';
-    var selectedColor = colors[0] || '';
-    var selectedSize = sizes[0] || '';
+    // var selectedColor = colors[0] || '';
+    // var selectedSize = sizes[0] || '';
 
     Build color buttons
     var colorsHtml = colors.map(function(color) {
@@ -139,11 +139,11 @@ document.addEventListener('DOMContentLoaded', function() {
             '" data-color="' + color + '">' + color + '</button>';
     }).join('');
 
-    var colorsHtml = colors.map(function(color) {
-      return '<button type="button" class="gift-guide-popup__color-btn' + 
-            (color === selectedColor ? ' selected' : '') + 
-            '" data-color="' + color + '">' + color + '</button>';
-    }).join('');
+    // var colorsHtml = colors.map(function(color) {
+    //   return '<button type="button" class="gift-guide-popup__color-btn' + 
+    //         (color === selectedColor ? ' selected' : '') + 
+    //         '" data-color="' + color + '">' + color + '</button>';
+    // }).join('');
 
     Build size dropdown
     var sizesHtml = '<option value="">Choose your size</option>' +
@@ -151,10 +151,10 @@ document.addEventListener('DOMContentLoaded', function() {
         return '<option value="' + size + '">' + size + '</option>';
     }).join('');
 
-    var sizesHtml = '<option value="">Choose your size</option>' +
-      sizes.map(function(size) {
-        return '<option value="' + size + '">' + size + '</option>';
-    }).join('');
+    // var sizesHtml = '<option value="">Choose your size</option>' +
+    //   sizes.map(function(size) {
+    //     return '<option value="' + size + '">' + size + '</option>';
+    // }).join('');
 
     Build popup HTML → COLOR FIRST, SIZE SECOND
     document.getElementById('gift-guide-popup-dynamic').innerHTML =
