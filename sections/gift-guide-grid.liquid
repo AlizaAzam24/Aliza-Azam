@@ -4,11 +4,11 @@
     {% for block in section.blocks %}
       {% assign product = all_products[block.settings.product] %}
       {% if product %}
-        {% comment %} <div class="gift-guide-grid__item" data-product-index="{{ forloop.index0 }}">
+        <div class="gift-guide-grid__item" data-product-index="{{ forloop.index0 }}">
           <img src="{{ product.featured_image | img_url: '470x550' }}"
             alt="{{ product.title }}" class="gift-guide-grid__img" width="470" height="550">
           <span class="gift-guide-grid__plus" data-product-index="{{ forloop.index0 }}">+</span>
-        </div> {% endcomment %}
+        </div>
 
         {% comment %} <div class="gift-guide-grid__item" data-handle="{{ product.handle }}" data-product-index="{{ forloop.index0 }}">
           <img src="{{ product.featured_image | img_url: '470x550' }}" alt="{{ product.title }}" 
@@ -17,7 +17,7 @@
         </div> {% endcomment %}
 
         <div class="gift-guide-grid__item" data-handle="{{ product.handle }}">
-          <img src="{{ product.featured_image | img_url: '400x400' }}" alt="{{ product.title }}">
+          <img src="{{ product.featured_image | img_url: '450x5' }}" alt="{{ product.title }}">
           <span class="gift-guide-grid__plus">+</span>
         </div>
 
