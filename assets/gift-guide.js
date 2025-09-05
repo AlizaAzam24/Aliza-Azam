@@ -126,35 +126,22 @@ document.addEventListener('DOMContentLoaded', function() {
       if (option2Name && sizes.indexOf(v.option2) === -1) sizes.push(v.option2);
     });
 
-    Default selections
+    //Default selections
     var selectedColor = colors[0] || '';
     var selectedSize = sizes[0] || '';
-    // var selectedColor = colors[0] || '';
-    // var selectedSize = sizes[0] || '';
 
-    Build color buttons
+    //Build color buttons
     var colorsHtml = colors.map(function(color) {
       return '<button type="button" class="gift-guide-popup__color-btn' +
             (color === selectedColor ? ' selected' : '') +
             '" data-color="' + color + '">' + color + '</button>';
     }).join('');
 
-    // var colorsHtml = colors.map(function(color) {
-    //   return '<button type="button" class="gift-guide-popup__color-btn' + 
-    //         (color === selectedColor ? ' selected' : '') + 
-    //         '" data-color="' + color + '">' + color + '</button>';
-    // }).join('');
-
-    Build size dropdown
+    //Build size dropdown
     var sizesHtml = '<option value="">Choose your size</option>' +
       sizes.map(function(size) {
         return '<option value="' + size + '">' + size + '</option>';
     }).join('');
-
-    // var sizesHtml = '<option value="">Choose your size</option>' +
-    //   sizes.map(function(size) {
-    //     return '<option value="' + size + '">' + size + '</option>';
-    // }).join('');
 
     //Build popup HTML → COLOR FIRST, SIZE SECOND//
     document.getElementById('gift-guide-popup-dynamic').innerHTML =
