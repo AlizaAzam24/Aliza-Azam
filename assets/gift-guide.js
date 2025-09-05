@@ -181,7 +181,8 @@ document.addEventListener('DOMContentLoaded', function() {
         '<button class="gift-guide-popup__atc-btn" type="button">' +
           'ADD TO CART <span class="gift-guide-popup__atc-arrow">→</span>' +
         '</button>' +
-      '</div>';
+      '</div>'
+    ;
 
   // // Build color buttons
   // let colorsHtml = colors.map(function(color) {
