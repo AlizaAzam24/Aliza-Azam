@@ -411,7 +411,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 24px;
+  padding: 20px;
 }
 
 /* Close button */
@@ -430,7 +430,7 @@
 .gift-guide-popup__top {
   display: flex;
   gap: 24px;
-  margin-bottom: 50px;
+  margin-top: 20px;
 }
 
 .gift-guide-popup__left {
