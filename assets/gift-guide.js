@@ -115,7 +115,6 @@ document.addEventListener('DOMContentLoaded', function() {
 //       </div>
 // `   ;
 
-
     var option1Name = product.options[0] || '';
     var option2Name = product.options[1] || '';
     var colors = [];

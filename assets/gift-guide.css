@@ -390,7 +390,7 @@
 }
 
 /* Top section: image left, info right */
-.gift-guide-popup__top {
+/* .gift-guide-popup__top {
   display: flex;
   flex-direction: row;
   gap: 15px;
@@ -400,9 +400,9 @@
 
 .gift-guide-popup__left {
   flex: 0 0 130px; /* control image width */
-}
+/* } */
 
-.gift-guide-popup__img {
+/* .gift-guide-popup__img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -413,10 +413,10 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-}
+} */
 
 /* Product info styling */
-.gift-guide-popup__product-title {
+/* .gift-guide-popup__product-title {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 4px;
@@ -429,10 +429,10 @@
 .gift-guide-popup__product-desc {
   font-size: 14px;
   line-height: 1.4;
-}
+} */
 
 /* Bottom section: centered controls */
-.gift-guide-popup__bottom {
+/* .gift-guide-popup__bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -502,9 +502,10 @@
 .gift-guide-popup__atc-btn:hover {
   background: #000;
   transform: scale(1.04);
-}
+} */
+
 /* Popup */
-.gift-guide-popup {
+/* .gift-guide-popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -515,10 +516,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 /* Popup container */
-.gift-guide-popup__content {
+/* .gift-guide-popup__content {
   background: #fff;
   box-shadow: 0 8px 40px rgba(0,0,0,0.17);
   padding: 25px 20px 40px;
@@ -531,10 +532,10 @@
   flex-direction: column;
   align-items: flex-start;
   border-radius: 6px;
-}
+} */
 
 /* Close button */
-.gift-guide-popup__close {
+/* .gift-guide-popup__close {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -543,10 +544,10 @@
   font-size: 1.8rem;
   color: #000;
   cursor: pointer;
-}
+} */
 
 /* Top section: image left, info right */
-.gift-guide-popup__top {
+/* .gift-guide-popup__top {
   display: flex;
   flex-direction: row;
   gap: 15px;
@@ -569,10 +570,10 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-}
+} */
 
 /* Product info styling */
-.gift-guide-popup__product-title {
+/* .gift-guide-popup__product-title {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 4px;
@@ -585,10 +586,10 @@
 .gift-guide-popup__product-desc {
   font-size: 14px;
   line-height: 1.4;
-}
+} */
 
 /* Bottom section: centered controls */
-.gift-guide-popup__bottom {
+/* .gift-guide-popup__bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -658,7 +659,7 @@
 .gift-guide-popup__atc-btn:hover {
   background: #000;
   transform: scale(1.04);
-}
+} */
 
 /* Product Image
 .gift-guide-popup__img {
