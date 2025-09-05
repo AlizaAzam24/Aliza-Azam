@@ -458,8 +458,8 @@
   font-size: 16px;
   font-weight: 300;
   margin-bottom: 5px;
-  top: 50px;
-  left: 145px;
+  /* top: 50px;
+  left: 145px; */
   color: #111;
   font-family: 'Jost';
 }
