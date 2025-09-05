@@ -1,4 +1,4 @@
-<section class="gift-guide-grid">
+{% comment %} <section class="gift-guide-grid">
   <h2 class="gift-guide-grid__title">Tisso vison in the wild</h2>
   <div class="gift-guide-grid__wrapper">
     {% for block in section.blocks %}
@@ -10,29 +10,10 @@
           <span class="gift-guide-grid__plus" data-product-index="{{ forloop.index0 }}">+</span>
         </div>
 
-        {% comment %} <div class="gift-guide-grid__item" data-handle="{{ product.handle }}" data-product-index="{{ forloop.index0 }}">
-          <img src="{{ product.featured_image | img_url: '470x550' }}" alt="{{ product.title }}" 
-            class="gift-guide-grid__img"/>
-          <span class="gift-guide-grid__plus" data-product-index="{{ forloop.index0 }}">+</span>
-        </div> 
-
-        <div class="gift-guide-grid__item" data-handle="{{ product.handle }}">
-          <img src="{{ product.featured_image | img_url: '450x5' }}" alt="{{ product.title }}">
-          <span class="gift-guide-grid__plus">+</span>
-        </div> {% endcomment %}
-
       {% endif %}
     {% endfor %}
   </div>
   <!-- Popup -->
-  {% comment %} <div id="gift-guide-popup" class="gift-guide-popup" style="display:none;">
-    <div class="gift-guide-popup__content">
-      <button class="gift-guide-popup__close" aria-label="Close popup">&times;</button>
-      <div id="gift-guide-popup-dynamic"></div> <!-- JS will fill -->
-    </div>
-  </div> {% endcomment %}
-
-
   <div id="gift-guide-popup" class="gift-guide-popup" style="display:none;">
     <div class="gift-guide-popup__content">
       <!-- Close Button -->
@@ -67,6 +48,73 @@
       "blocks": [
         { "type": "product" }, { "type": "product" }, { "type": "product" },
         { "type": "product" }, { "type": "product" }, { "type": "product" }
+      ]
+    }
+  ]
+}
+{% endschema %} {% endcomment %}
+
+<section class="gift-guide-grid">
+  <h2 class="gift-guide-grid__title">
+    {{ section.settings.grid_title }}
+  </h2>
+
+  <div class="gift-guide-grid__wrapper">
+    {% for block in section.blocks %}
+      {% assign product = all_products[block.settings.product] %}
+      {% if product %}
+        <div class="gift-guide-grid__item" data-handle="{{ product.handle }}">
+          <img
+            src="{{ product.featured_image | img_url: '400x400' }}"
+            alt="{{ product.title }}"
+            class="gift-guide-grid__img"
+          />
+          <span class="gift-guide-grid__plus">+</span>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- Popup container -->
+  <div id="gift-guide-popup" class="gift-guide-popup" style="display:none;">
+    <div class="gift-guide-popup__content">
+      <button class="gift-guide-popup__close" aria-label="Close popup">&times;</button>
+      <div id="gift-guide-popup-dynamic"></div> <!-- JS injects product info here -->
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Gift Guide Product Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "grid_title",
+      "label": "Section Title",
+      "default": "Our Gift Guide"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        { "type": "product", "id": "product", "label": "Select a product" }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Gift Guide Product Grid",
+      "blocks": [
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" }
       ]
     }
   ]
